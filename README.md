@@ -5,9 +5,8 @@ To use this project
 
 2. The db/src/.hdiconfig is platform specific, the default is for HANA Cloud, you can rename the appropirate
 
-HANA2.hdicconfig.txt - For HANA 2.x 
-
-HC.hdiconfig.txt - For Hana Cloud
+    HANA2.hdicconfig.txt - For HANA 2.x 
+    HC.hdiconfig.txt - For Hana Cloud
 
 3. Execute FlowGraph CCG_LAD2019
 
