@@ -3,6 +3,8 @@
 To use this project
 1. Clone Project
 
+2. Specify Space - Project Setting -> Space
+
 2. The db/src/.hdiconfig is platform specific, the default is for HANA Cloud, you can rename the appropirate
 
     HANA2.hdicconfig.txt - For HANA 2.x 
