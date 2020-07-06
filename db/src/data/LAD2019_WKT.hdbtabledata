@@ -1,0 +1,23 @@
+{
+	"format_version": 1,
+
+	"imports": [{
+		"target_table": "LAD2019_WKT",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "LAD2019_WKT.csv",
+			"has_header": false
+		},
+		"import_settings": {
+			"include_filter": []
+		},
+		"column_mappings" : {
+			"objectid" : 1,
+			"lad19cd": 2,
+			"lad19nm"   : 3,
+			"long"  : 4,
+			"lat"  : 5,
+			"SHAPE_WKT"  : 6
+		}
+	}]
+}

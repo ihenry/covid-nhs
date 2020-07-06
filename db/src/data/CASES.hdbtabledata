@@ -1,0 +1,26 @@
+{
+	"format_version": 1,
+
+	"imports": [{
+			"target_table": "CASES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "coronavirus-cases_latest.csv",
+				"has_header": true,
+				"type_config" : { 
+        			"delimiter" : "," 
+        		} 
+			},
+			"import_settings": {
+				"include_filter": [],
+				"import_columns": [
+					"Area name",
+					"Area code",
+					"Area type",
+					"Specimen date",
+					"Daily lab-confirmed cases",
+					"Cumulative lab-confirmed cases"
+			]
+		}
+	}]
+}

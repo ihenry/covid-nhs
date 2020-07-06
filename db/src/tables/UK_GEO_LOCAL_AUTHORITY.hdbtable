@@ -1,0 +1,15 @@
+COLUMN TABLE "UK_GEO_LOCAL_AUTHORITY" 
+("FID" INTEGER,
+"objectid" INTEGER ,
+"lad17cd" NVARCHAR(9),
+"lad17nm" NVARCHAR(28),
+"lad17nmw" NVARCHAR(24),
+"bng_e" INTEGER,
+"bng_n" INTEGER,
+"long" DECIMAL(24,15) ,
+"lat" DECIMAL(24,15) ,
+"st_areasha" double ,
+"st_lengths" double ,
+"Shape__Are" double ,
+"Shape__Len" double ,
+"SHAPE" ST_GEOMETRY(4326))

@@ -1,0 +1,24 @@
+{
+	"format_version": 1,
+
+	"imports": [{
+		"target_table": "NHS_PATHWAYS",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "NHSPathwaysCovid-latest.csv",
+			"has_header": true
+		},
+		"import_settings": {
+			"include_filter": []
+		},
+		"column_mappings" : {
+			"SiteType" : 1,
+			"Call Date": 2,
+			"Gender"   : 3,
+			"AgeBand"  : 4,
+			"CCGCode"  : 5,
+			"CCGName"  : 6,
+			"TriageCount": 7
+		}
+	}]
+}

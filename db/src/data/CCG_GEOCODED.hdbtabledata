@@ -1,0 +1,37 @@
+{
+	"format_version": 1,
+
+	"imports": [{
+		"target_table": "CCG_GEOCODED",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "CCG_GEOCODED.csv",
+			"has_header": false,
+			"type_config": {
+				"delimiter": ";"
+			}
+		},
+		"column_mappings": {
+				"ORGANISATION_CODE" : 1,
+				"NAME" : 2,
+				"NATIONAL_GROUPING" : 3,
+				"HIGH_LEVEL_HEALTH_GEOGRAPHY" : 4,
+				"ADDRESS_LINE_1" : 5,
+				"ADDRESS_LINE_2" : 6,
+				"ADDRESS_LINE_3" : 7,
+				"ADDRESS_LINE_4" : 8,
+				"ADDRESS_LINE_5" : 9,
+				"POSTCODE" : 10,
+				"OPEN_DATE" : 11,
+				"CLOSE_DATE" : 12,
+				"ORGANISATION_SUB_TYPE_CODE" : 13,
+				"AMENDED_RECORD_INDICATOR" : 14,
+				"COUNTRY" : 15,
+				"ADDR_LATITUDE" : 17,
+				"ADDR_LONGITUDE" : 18,
+				"GEO_SIDE_OF_STREET" : 20,
+				"GEO_INFO_CODE" : 21,
+				"GEO_ASMT_LEVEL" :22
+		}
+	}]
+}

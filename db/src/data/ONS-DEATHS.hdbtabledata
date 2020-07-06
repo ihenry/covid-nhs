@@ -1,0 +1,28 @@
+
+{
+	"format_version": 1,
+
+	"imports": [{
+			"target_table": "ONS_DEATHS",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "ONS-Deaths-Latest.csv",
+				"has_header": true,
+				"type_config" : {
+        			"delimiter" : ","
+        		}
+			},
+			"import_settings": {
+				"include_filter": [],
+				"import_columns": [
+					"Area code",
+					"Geography type",
+					"Area name",
+					"Cause of death",
+					"Week number",
+					"Place of death",
+					"Number of deaths"
+			]
+		}
+	}]
+}

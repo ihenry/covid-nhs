@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:DataFoundation="http://www.sap.com/ndb/BiModelDataFoundation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="DAILY" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="DAILY"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="CASES_CV">
+    <resourceUri>CASES_CV</resourceUri>
+  </DataSource>
+  <DataSource id="111_Online_CV">
+    <resourceUri>111_Online_CV</resourceUri>
+  </DataSource>
+  <DataSource id="HOSPITAL_DEATHS_CV">
+    <resourceUri>HOSPITAL_DEATHS_CV</resourceUri>
+  </DataSource>
+  <DataSource id="PATHWAYS_CV">
+    <resourceUri>PATHWAYS_CV</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Specimen_date"/>
+    
+      <viewAttribute id="CASES_1"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="CASES_CV"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="111_Online"/>
+      <viewAttribute id="111_DATE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="111_Online_CV">
+      <mapping xsi:type="Calculation:AttributeMapping" target="111_Online" source="Total"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <viewAttributes>
+      <viewAttribute id="NHS_ENGLAND_HOSIPITAL_DEATHS"/>
+      <viewAttribute id="DATE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="HOSPITAL_DEATHS_CV">
+      <mapping xsi:type="Calculation:AttributeMapping" target="NHS_ENGLAND_HOSIPITAL_DEATHS" source="DEATHS"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="DATE"/>
+      <viewAttribute id="111_Online" aggregationType="sum"/>
+      <viewAttribute id="NHS_ENGLAND_HOSIPITAL_DEATHS" aggregationType="sum"/>
+      <viewAttribute id="TRIAGE_COUNT" aggregationType="sum"/>
+    
+      <viewAttribute id="CASES_1" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE" source="Specimen_date"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="111_Online" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NHS_ENGLAND_HOSIPITAL_DEATHS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="TRIAGE_COUNT" null="true" value=""/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="CASES_1" source="CASES_1"/>
+    </input>
+    <input node="Projection_2" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE" source="111_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="111_Online" source="111_Online"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="NHS_ENGLAND_HOSIPITAL_DEATHS" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="TRIAGE_COUNT" null="true" value=""/>
+    
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CASES_1" null="true" value=""/>
+    </input>
+    <input node="Projection_3" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE" source="DATE"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="111_Online" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NHS_ENGLAND_HOSIPITAL_DEATHS" source="NHS_ENGLAND_HOSIPITAL_DEATHS"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="TRIAGE_COUNT" null="true" value=""/>
+    
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CASES_1" null="true" value=""/>
+    </input>
+    <input node="Projection_4" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE" source="PT_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRIAGE_COUNT" source="TRIAGE_COUNT"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="NHS_ENGLAND_HOSIPITAL_DEATHS" source="NULL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="111_Online" source="NULL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CASES_1" source="NULL"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4">
+    <viewAttributes>
+      <viewAttribute id="PT_DATE"/>
+    
+      <viewAttribute id="TRIAGE_COUNT"/></viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="NULL" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>null</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="PATHWAYS_CV"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Union_1">
+  <attributes>
+    <attribute id="DATE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DATE"/>
+      <keyMapping columnObjectName="Union_1" columnName="DATE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="WEEK" order="4" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Week Number"/>
+      <keyCalculation datatype="INTEGER" expressionLanguage="SQL">
+        <formula>WEEK(&quot;DATE&quot;)</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+    <calculatedAttribute id="MONTH" order="5" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Month"/>
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="13">
+        <formula>MONTHNAME(&quot;DATE&quot;)</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  
+    <calculatedAttribute id="3_DATE" order="8" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="3 Days"/>
+      <keyCalculation datatype="DATE" expressionLanguage="SQL">
+        <formula>ADD_DAYS('2019-12-31',ROUND((DAYOFYEAR(&quot;DATE&quot;)/3),0)*3)</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures>
+    <measure id="111_Online" order="2" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="111 Online"/>
+      <measureMapping columnObjectName="Union_1" columnName="111_Online"/>
+    </measure>
+    <measure id="NHS_ENGLAND_HOSIPITAL_DEATHS" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="NHS England Hospital Deaths"/>
+      <measureMapping columnObjectName="Union_1" columnName="NHS_ENGLAND_HOSIPITAL_DEATHS"/>
+    </measure>
+    <measure id="TRIAGE_COUNT" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Pathway Triages"/>
+      <measureMapping columnObjectName="Union_1" columnName="TRIAGE_COUNT"/>
+    </measure>
+  
+    <measure id="CASES_1" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Cases"/>
+      <measureMapping columnObjectName="Union_1" columnName="CASES_1"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions>
+    <localDimension id="Calendar">
+      <attributeRef xsi:type="DataFoundation:Attribute">MONTH</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">WEEK</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">DATE</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">3_DATE</attributeRef>
+      <hierarchies>
+        <hierarchy xsi:type="Dimension:LeveledHierarchy" id="Calendar" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="DO_NOT_ADD_ROOT_NODE" withRootNode="false" nodeStyle="NAME_PATH_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+          <descriptions defaultDescription="Calendar"/>
+          <unassignedMemberProperties mode="FALSE"/>
+          <levels>
+            <level levelAttribute="MONTH" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="DATE" sortDirection="ASC"/>
+            <level levelAttribute="WEEK" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="DATE" sortDirection="ASC"/>
+            <level levelAttribute="DATE" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="DATE" sortDirection="ASC"/>
+            <level levelAttribute="3_DATE" levelType="MDLEVEL_TYPE_REGULAR" order="4" orderAttribute="DATE" sortDirection="ASC"/>
+          </levels>
+        </hierarchy>
+      </hierarchies>
+    </localDimension>
+  </localDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-276" y="317"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="37" y="317"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="271" y="319"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="47" y="178"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="480" y="317"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

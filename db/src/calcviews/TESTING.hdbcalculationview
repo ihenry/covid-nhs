@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TESTING" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TESTING"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="TESTING_DATA">
+    <resourceUri>TESTING_DATA</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Date_of_activity"/>
+      <viewAttribute id="Date_of_reporting"/>
+      <viewAttribute id="Nation"/>
+      <viewAttribute id="Pillar"/>
+      <viewAttribute id="Daily_number_of_tests"/>
+      <viewAttribute id="Cumulative_number_of_tests"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="ACTIVITY_DATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>CASE &quot;Date_of_activity&quot; 
+	 WHEN 'the ' then ADD_DAYS(&quot;REPORTING_DATE&quot;,-1)
+	 ELSE to_date(&quot;Date_of_activity&quot;,'DD/MM/YYYY') 
+END
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="REPORTING_DATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>to_date(&quot;Date_of_reporting&quot;,'DD/MM/YYYY')</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="DAILY_TESTS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>TO_INT(REPLACE(&quot;Daily_number_of_tests&quot;, ',', ''))</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="CUMULATIVE_TESTS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>TO_INT(REPLACE(&quot;Cumulative_number_of_tests&quot;, ',', ''))</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="TEST_TYPE" datatype="NVARCHAR" length="64" expressionLanguage="SQL">
+        <formula>CASE &quot;Pillar&quot; 
+	 WHEN 'Pillar 1' then 'p1 In Person'
+	 WHEN 'Pillar 2' then 'p2 Posted &amp; Drive-through'
+	 WHEN 'Pillar 3' then 'p3 Antibody'
+	 WHEN 'Pillar 4' then 'p4 Research'
+	 WHEN 'Pillar 2 (excluding Wales)' then 'p2 Posted &amp; Drive-through excluding Wales'
+	 WHEN 'Pillar 1 (plus Pillar 2 for Wales)' then 'p1 In Person plus p2 for Wales'
+	 ELSE &quot;Pillar&quot; 
+ END</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="TESTING_DATA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Date_of_activity" source="Date of activity"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Date_of_reporting" source="Date of reporting"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_number_of_tests" source="Daily number of tests"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_number_of_tests" source="Cumulative number of tests"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="ACTIVITY_DATE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ACTIVITY_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ACTIVITY_DATE"/>
+    </attribute>
+    <attribute id="REPORTING_DATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REPORTING_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REPORTING_DATE"/>
+    </attribute>
+    <attribute id="Nation" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Nation"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Nation"/>
+    </attribute>
+    <attribute id="Pillar" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Pillar"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Pillar"/>
+    </attribute>
+    <attribute id="TEST_TYPE" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TEST_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TEST_TYPE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="DAILY_TESTS" order="5" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DAILY_TESTS"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DAILY_TESTS"/>
+    </measure>
+    <measure id="CUMULATIVE_TESTS" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="CUMULATIVE_TESTS"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CUMULATIVE_TESTS"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

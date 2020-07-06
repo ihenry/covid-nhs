@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:DataFoundation="http://www.sap.com/ndb/BiModelDataFoundation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="PATHWAYS_CV" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="HOURLY" enforceSqlExecution="false">
+<descriptions defaultDescription=""/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="UK_CCG_2019">
+    <resourceUri>UK_CCG_2019</resourceUri>
+  </DataSource>
+  <DataSource id="NHS_PATHWAYS">
+    <resourceUri>NHS_PATHWAYS</resourceUri>
+  </DataSource>
+  <DataSource id="LAD_REGION_DCV">
+    <resourceUri>LAD_REGION_DCV</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="GEO_NAME"/>
+      <viewAttribute id="GEO_LATITUDE"/>
+      <viewAttribute id="GEO_LONGITUDE"/>
+      <viewAttribute id="lad19cd"/>
+      <viewAttribute id="lad19nm"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="UK_CCG_2019">
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEO_NAME" source="NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEO_LATITUDE" source="ADDR_LATITUDE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEO_LONGITUDE" source="ADDR_LONGITUDE"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="SITETYPE" aggregationType="sum"/>
+      <viewAttribute id="GENDER"/>
+      <viewAttribute id="AGE_BAND"/>
+      <viewAttribute id="CCG_CODE"/>
+      <viewAttribute id="CCG_NAME"/>
+      <viewAttribute id="TRIAGE_COUNT" aggregationType="sum"/>
+    
+      <viewAttribute id="PT_DATE"/>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19NM"/>
+      <viewAttribute id="LAD19NM"/>
+      <viewAttribute hidden="true" id="JOIN$CCG_NAME_UPPER$GEO_NAME"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_3">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SITETYPE" source="SITETYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDER" source="GENDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGE_BAND" source="AGE_BAND"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CCG_CODE" source="CCG_CODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CCG_NAME" source="CCG_NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRIAGE_COUNT" source="TRIAGE_COUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PT_DATE" source="PT_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CCG_NAME_UPPER$GEO_NAME" source="CCG_NAME_UPPER"/>
+    </input>
+    <input node="Join_2">
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTLA19NM" source="UTLA19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RGN19NM" source="RGN19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAD19NM" source="LAD19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CCG_NAME_UPPER$GEO_NAME" source="GEO_NAME"/>
+    </input>
+    <joinAttribute name="JOIN$CCG_NAME_UPPER$GEO_NAME"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <viewAttributes>
+      <viewAttribute id="SITETYPE"/>
+      <viewAttribute id="GENDER"/>
+      <viewAttribute id="AGE_BAND"/>
+      <viewAttribute id="CCG_CODE"/>
+      <viewAttribute id="CCG_NAME"/>
+    
+      <viewAttribute id="TRIAGE_COUNT"/>
+    
+      <viewAttribute id="Call_Date"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+    
+      <calculatedViewAttribute id="PT_DATE" datatype="DATE" expressionLanguage="SQL">
+    
+        <formula>case left(&quot;Call_Date&quot;,4) 
+    WHEN '2020' then TO_DATE(&quot;Call_Date&quot;,'YYYY-MM-DD')
+	ELSE TO_DATE(&quot;Call_Date&quot;,'DD/MM/YYYY') 
+END</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="CCG_NAME_UPPER" datatype="VARCHAR" length="128" expressionLanguage="SQL">
+        <formula>upper(&quot;CCG_NAME&quot;)</formula>
+      </calculatedViewAttribute></calculatedViewAttributes>
+    <input node="NHS_PATHWAYS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SITETYPE" source="SiteType"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDER" source="Gender"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGE_BAND" source="AgeBand"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CCG_CODE" source="CCGCode"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CCG_NAME" source="CCGName"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRIAGE_COUNT" source="TriageCount"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Call_Date" source="Call Date"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19NM"/>
+      <viewAttribute id="LAD19NM"/>
+      <viewAttribute id="GEO_NAME"/>
+      <viewAttribute id="LAD19CD"/>
+      <viewAttribute hidden="true" id="JOIN$lad19cd$LAD19CD"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_2">
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEO_NAME" source="GEO_NAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$lad19cd$LAD19CD" source="lad19cd"/>
+    </input>
+    <input node="Projection_4">
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAD19CD" source="LAD19CD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTLA19NM" source="UTLA19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RGN19NM" source="RGN19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAD19NM" source="LAD19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$lad19cd$LAD19CD" source="LAD19CD"/>
+    </input>
+    <joinAttribute name="JOIN$lad19cd$LAD19CD"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4">
+    <viewAttributes>
+    
+      <viewAttribute id="LAD19CD"/>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19NM"/>
+      <viewAttribute id="LAD19NM"/>
+      <viewAttribute id="UTLA19CD"/>
+      <viewAttribute id="RGN19CD"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="LAD_REGION_DCV"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="SITETYPE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SITETYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="SITETYPE"/>
+    </attribute>
+    <attribute id="GENDER" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Gender"/>
+      <keyMapping columnObjectName="Join_1" columnName="GENDER"/>
+    </attribute>
+    <attribute id="AGE_BAND" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Age Band"/>
+      <keyMapping columnObjectName="Join_1" columnName="AGE_BAND"/>
+    </attribute>
+    <attribute id="CCG_CODE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CCG_CODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="CCG_CODE"/>
+    </attribute>
+    <attribute id="CCG_NAME" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CCG_NAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="CCG_NAME"/>
+    </attribute>
+    <attribute id="PT_DATE" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PT_DATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PT_DATE"/>
+    </attribute>
+    <attribute id="LAD19NM" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Local Authority"/>
+      <keyMapping columnObjectName="Join_1" columnName="LAD19NM"/>
+    </attribute>
+    <attribute id="UTLA19NM" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Upper Local Authority"/>
+      <keyMapping columnObjectName="Join_1" columnName="UTLA19NM"/>
+    </attribute>
+    <attribute id="RGN19NM" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Region"/>
+      <keyMapping columnObjectName="Join_1" columnName="RGN19NM"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="TRIAGE_COUNT" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Pathway Triages"/>
+      <measureMapping columnObjectName="Join_1" columnName="TRIAGE_COUNT"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions>
+    <localDimension id="Region">
+      <attributeRef xsi:type="DataFoundation:Attribute">RGN19NM</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">UTLA19NM</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">LAD19NM</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">CCG_NAME</attributeRef>
+      <hierarchies>
+        <hierarchy xsi:type="Dimension:LeveledHierarchy" id="Region" aggregateAllNodes="true" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="DO_NOT_ADD_ROOT_NODE" withRootNode="false" nodeStyle="LEVEL_NAME_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+          <descriptions defaultDescription="Region"/>
+          <unassignedMemberProperties mode="FALSE"/>
+          <levels>
+            <level levelAttribute="RGN19NM" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="RGN19NM" sortDirection="ASC"/>
+            <level levelAttribute="UTLA19NM" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="UTLA19NM" sortDirection="ASC"/>
+            <level levelAttribute="LAD19NM" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="LAD19NM" sortDirection="ASC"/>
+            <level levelAttribute="CCG_NAME" levelType="MDLEVEL_TYPE_REGULAR" order="4" orderAttribute="CCG_NAME" sortDirection="ASC"/>
+          </levels>
+        </hierarchy>
+      </hierarchies>
+    </localDimension>
+  </localDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="326" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="516"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="295" y="217"/>
+      <rectangleSize height="30" width="223"/>
+    </shape>
+  
+    <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="620" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Join_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="920" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="396" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="118" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="180"/>
+    </shape>
+    <shape modelObjectName="Projection_4" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="516"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

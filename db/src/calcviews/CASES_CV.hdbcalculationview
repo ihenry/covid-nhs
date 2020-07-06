@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:DataFoundation="http://www.sap.com/ndb/BiModelDataFoundation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="CASES_CV" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CASES_CV"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="CASES">
+    <resourceUri>CASES</resourceUri>
+  </DataSource>
+  <DataSource id="LAD_REGION_DCV">
+    <resourceUri>LAD_REGION_DCV</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="CASES_ULA" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="Area_name"/>
+      <viewAttribute id="Area_code"/>
+      <viewAttribute id="Area_type"/>
+      <viewAttribute id="Specimen_date"/>
+      <viewAttribute id="Daily_lab-confirmed_cases"/>
+      <viewAttribute id="Cumulative_lab-confirmed_cases"/></viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="DOY" datatype="SMALLINT" expressionLanguage="SQL">
+        <formula>DAYOFYEAR(&quot;Specimen_date&quot;)</formula>
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="3DAY" datatype="INTEGER" expressionLanguage="SQL">
+    
+        <formula>ROUND((DAYOFYEAR(&quot;Specimen_date&quot;)/3),0)*3</formula>
+    
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="CASES" datatype="INTEGER" expressionLanguage="SQL">
+    
+        <formula>to_int(&quot;Daily_lab-confirmed_cases&quot;)</formula>
+    
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="CASES">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_name" source="Area name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="Area code"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_type" source="Area type"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Specimen_date" source="Specimen date"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases" source="Daily lab-confirmed cases"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_lab-confirmed_cases" source="Cumulative lab-confirmed cases"/></input>
+    <filter>&quot;Area_type&quot;='Upper tier local authority'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="LAD_REGION">
+    <viewAttributes>
+      <viewAttribute id="UTLA19CD"/>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19CD"/>
+      <viewAttribute id="RGN19NM"/>
+    
+      <viewAttribute id="POPULATION" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="LAD_REGION_DCV"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="Area_name"/>
+      <viewAttribute id="Area_code"/>
+      <viewAttribute id="Area_type"/>
+      <viewAttribute id="Specimen_date"/>
+      <viewAttribute id="Daily_lab-confirmed_cases" aggregationType="sum"/>
+      <viewAttribute id="Cumulative_lab-confirmed_cases" aggregationType="sum"/>
+      <viewAttribute id="UTLA19NM"/>
+    
+      <viewAttribute id="RGN19NM"/>
+      <viewAttribute id="DOY" aggregationType="sum"/>
+      <viewAttribute id="3DAY" aggregationType="sum"/>
+    
+      <viewAttribute id="CASES_1" aggregationType="sum"/>
+    
+      <viewAttribute id="POPULATION" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="CASES" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>to_int(&quot;Daily_lab-confirmed_cases&quot;)</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="CASES_ULA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="Area_code"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_name" source="Area_name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_type" source="Area_type"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Specimen_date" source="Specimen_date"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases" source="Daily_lab-confirmed_cases"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_lab-confirmed_cases" source="Cumulative_lab-confirmed_cases"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOY" source="DOY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="3DAY" source="3DAY"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="CASES_1" source="CASES"/>
+    </input>
+    <input node="LAD_REGION">
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTLA19NM" source="UTLA19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RGN19NM" source="RGN19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POPULATION" source="POPULATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="UTLA19CD"/>
+    </input>
+    <joinAttribute name="Area_code"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="AREA_MAX_MIN">
+    <viewAttributes>
+      <viewAttribute id="Area_code"/>
+      <viewAttribute id="Daily_lab-confirmed_cases_Min" aggregationType="min"/>
+      <viewAttribute id="Daily_lab-confirmed_cases_Max" aggregationType="max"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="Range" datatype="DECIMAL" expressionLanguage="SQL" length="13" scale="5">
+        <formula>&quot;Daily_lab-confirmed_cases_Max&quot;-&quot;Daily_lab-confirmed_cases_Min&quot;</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <restrictedViewAttributes/>
+    <input node="3DAY_MAX_MIN"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="3DAY_MAX_MIN">
+    <viewAttributes>
+    
+    
+      <viewAttribute id="Area_code" keepFlag="true"/>
+      <viewAttribute id="Daily_lab-confirmed_cases_Min" aggregationType="min"/>
+      <viewAttribute id="Daily_lab-confirmed_cases_Max" aggregationType="max"/>
+    
+      <viewAttribute id="3DAY" keepFlag="true"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="CASES_ULA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases_Min" source="Daily_lab-confirmed_cases"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases_Max" source="Daily_lab-confirmed_cases"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="Area_name"/>
+      <viewAttribute id="Area_code"/>
+      <viewAttribute id="Area_type"/>
+      <viewAttribute id="Specimen_date"/>
+      <viewAttribute id="Daily_lab-confirmed_cases" aggregationType="sum"/>
+      <viewAttribute id="Cumulative_lab-confirmed_cases" aggregationType="sum"/>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19NM"/>
+      <viewAttribute id="DOY" aggregationType="sum"/>
+      <viewAttribute id="3DAY" aggregationType="sum"/>
+      <viewAttribute id="Range" aggregationType="sum"/>
+      <viewAttribute id="Daily_lab-confirmed_cases_Min" aggregationType="avg"/>
+      <viewAttribute id="Daily_lab-confirmed_cases_Max" aggregationType="max"/>
+      <viewAttribute id="CASES_1" aggregationType="sum"/>
+      <viewAttribute id="POPULATION" aggregationType="sum"/>
+      <viewAttribute hidden="true" id="JOIN$Area_code$Area_code"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="AREA_MAX_MIN">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Range" source="Range"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases_Min" source="Daily_lab-confirmed_cases_Min"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases_Max" source="Daily_lab-confirmed_cases_Max"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$Area_code$Area_code" source="Area_code"/>
+    </input>
+    <input node="Join_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_name" source="Area_name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="Area_code"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_type" source="Area_type"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Specimen_date" source="Specimen_date"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases" source="Daily_lab-confirmed_cases"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_lab-confirmed_cases" source="Cumulative_lab-confirmed_cases"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTLA19NM" source="UTLA19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RGN19NM" source="RGN19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOY" source="DOY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="3DAY" source="3DAY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CASES_1" source="CASES_1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POPULATION" source="POPULATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$Area_code$Area_code" source="Area_code"/>
+    </input>
+    <joinAttribute name="JOIN$Area_code$Area_code"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_2">
+  <attributes>
+    <attribute id="Area_name" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Area_name"/>
+      <keyMapping columnObjectName="Join_2" columnName="Area_name"/>
+    </attribute>
+    <attribute id="Area_code" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Area_code"/>
+      <keyMapping columnObjectName="Join_2" columnName="Area_code"/>
+    </attribute>
+    <attribute id="Area_type" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Area Type"/>
+      <keyMapping columnObjectName="Join_2" columnName="Area_type"/>
+    </attribute>
+    <attribute id="Specimen_date" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date"/>
+      <keyMapping columnObjectName="Join_2" columnName="Specimen_date"/>
+    </attribute>
+    <attribute id="UTLA19NM" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTLA19NM"/>
+      <keyMapping columnObjectName="Join_2" columnName="UTLA19NM"/>
+    </attribute>
+    <attribute id="RGN19NM" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RGN19NM"/>
+      <keyMapping columnObjectName="Join_2" columnName="RGN19NM"/>
+    </attribute>
+    <attribute id="DOY" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOY"/>
+      <keyMapping columnObjectName="Join_2" columnName="DOY"/>
+    </attribute>
+    <attribute id="3DAY" order="12" descriptionColumnName="Specimen_date" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="3 Days"/>
+      <keyMapping columnObjectName="Join_2" columnName="3DAY"/>
+    </attribute>
+    <attribute id="POPULATION_DIM" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Population"/>
+      <keyMapping columnObjectName="Join_2" columnName="POPULATION"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="Daily_lab-confirmed_cases" order="5" aggregationType="sum" measureType="simple" engineAggregation="avg">
+      <descriptions defaultDescription="Cases_Decimal"/>
+      <measureMapping columnObjectName="Join_2" columnName="Daily_lab-confirmed_cases"/>
+    </measure>
+    <measure id="Cumulative_lab-confirmed_cases" order="6" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="Cumulative Cases"/>
+      <measureMapping columnObjectName="Join_2" columnName="Cumulative_lab-confirmed_cases"/>
+    </measure>
+    <measure id="Range" order="13" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Range"/>
+      <measureMapping columnObjectName="Join_2" columnName="Range"/>
+    </measure>
+    <measure id="Daily_lab-confirmed_cases_Min" order="14" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Daily_lab-confirmed_cases_Min"/>
+      <measureMapping columnObjectName="Join_2" columnName="Daily_lab-confirmed_cases_Min"/>
+    </measure>
+    <measure id="Daily_lab-confirmed_cases_Max" order="15" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Daily_lab-confirmed_cases_Max"/>
+      <measureMapping columnObjectName="Join_2" columnName="Daily_lab-confirmed_cases_Max"/>
+    </measure>
+  
+    <measure id="CASES_1" order="17" aggregationType="sum" measureType="simple" replaceNull="true">
+      <descriptions defaultDescription="Cases"/>
+      <measureMapping columnObjectName="Join_2" columnName="CASES_1"/>
+    </measure>
+  
+    <measure id="POPULATION_SUM" order="19" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Population"/>
+      <measureMapping columnObjectName="Join_2" columnName="POPULATION"/>
+    </measure>
+  
+    <measure id="POPULATION_MAX" order="22" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="Population"/>
+      <measureMapping columnObjectName="Join_2" columnName="POPULATION"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures>
+    <measure id="DAILY_CASES_NORMALISED" order="8" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="5" scale="3" presentationScale="2" expressionLanguage="SQL">
+      <descriptions defaultDescription="Daily Cases Normalised"/>
+      <formula>CASE &quot;Range&quot; 
+	 WHEN 0 then 0 
+	 ELSE (&quot;Daily_lab-confirmed_cases&quot;-&quot;Daily_lab-confirmed_cases_Min&quot; )/&quot;Range&quot; 
+END</formula>
+      
+      
+      
+      
+      
+      
+      
+      </measure>
+  
+    <measure id="NORMALISED_3DAY" order="11" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="5" scale="3" expressionLanguage="SQL">
+      <descriptions defaultDescription="NORMALISED_3DAY"/>
+      <formula>&quot;DAILY_CASES_NORMALISED&quot;/3</formula>
+    
+      
+      
+      
+      
+      
+      
+      </measure>
+  
+    <measure id="AGG_RANGE" order="16" aggregationType="count" measureType="simple" datatype="NVARCHAR" length="13" scale="5" expressionLanguage="SQL">
+      <formula>&quot;Daily_lab-confirmed_cases_Max&quot;-&quot;Daily_lab-confirmed_cases_Min&quot;</formula>
+      
+      
+      </measure>
+  
+    <measure id="CASES_PER_100K_DAY" order="18" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="15" scale="3" presentationScale="2" expressionLanguage="SQL">
+      <descriptions defaultDescription="Cases per 100k"/>
+      <formula>(&quot;Daily_lab-confirmed_cases&quot;/&quot;POPULATION_SUM&quot;)*100000</formula>
+      
+      </measure>
+  
+    <measure id="CASES_PER_100K_AGG" order="21" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="3" expressionLanguage="SQL">
+      <descriptions defaultDescription="Cases per 100k*"/>
+      <formula>(&quot;Daily_lab-confirmed_cases&quot;/&quot;POPULATION_DIM&quot;)*100000</formula>
+    
+      </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions>
+    <localDimension id="Region">
+      <attributeRef xsi:type="DataFoundation:Attribute">RGN19NM</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">UTLA19NM</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">Area_name</attributeRef>
+      <hierarchies>
+        <hierarchy xsi:type="Dimension:LeveledHierarchy" id="Region" aggregateAllNodes="true" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="DO_NOT_ADD_ROOT_NODE" withRootNode="false" nodeStyle="LEVEL_NAME_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+          <descriptions defaultDescription="Region"/>
+          <unassignedMemberProperties mode="FALSE"/>
+          <levels>
+            <level levelAttribute="RGN19NM" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="RGN19NM" sortDirection="ASC"/>
+            <level levelAttribute="UTLA19NM" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="UTLA19NM" sortDirection="ASC"/>
+            <level levelAttribute="Area_name" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="Area_name" sortDirection="ASC"/>
+          </levels>
+        </hierarchy>
+      </hierarchies>
+    </localDimension>
+  </localDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="275" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="CASES_ULA" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="118" y="641"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="LAD_REGION" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="348" y="641"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="481"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="CASES_ULA" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="248"/>
+    </shape>
+    <shape modelObjectName="LAD_REGION" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="AREA_MAX_MIN" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="3DAY_MAX_MIN" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="499"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="275" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape modelObjectName="AREA_MAX_MIN" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="248"/>
+    </shape></shapes>
+</layout>
+</Calculation:scenario>

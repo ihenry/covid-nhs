@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="CCG_DCV" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CCG_DCV"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="UK_CCG_2019">
+    <resourceUri>UK_CCG_2019</resourceUri>
+  </DataSource>
+  <DataSource id="UK_LA_ULA_LOOKUP">
+    <resourceUri>UK_LA_ULA_LOOKUP</resourceUri>
+  </DataSource>
+  <DataSource id="UK_LAD_REGION_LOOKUP">
+    <resourceUri>UK_LAD_REGION_LOOKUP</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="ORGANISATION_CODE"/>
+      <viewAttribute id="NAME"/>
+      <viewAttribute id="NATIONAL_GROUPING"/>
+      <viewAttribute id="HIGH_LEVEL_HEALTH_GEOGRAPHY"/>
+      <viewAttribute id="ADDRESS_LINE_1"/>
+      <viewAttribute id="ADDRESS_LINE_2"/>
+      <viewAttribute id="ADDRESS_LINE_3"/>
+      <viewAttribute id="ADDRESS_LINE_4"/>
+      <viewAttribute id="ADDRESS_LINE_5"/>
+      <viewAttribute id="POSTCODE"/>
+      <viewAttribute id="OPEN_DATE"/>
+      <viewAttribute id="CLOSE_DATE"/>
+      <viewAttribute id="ORGANISATION_SUB_TYPE_CODE"/>
+      <viewAttribute id="AMENDED_RECORD_INDICATOR"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="ADDR_LATITUDE"/>
+      <viewAttribute id="ADDR_LONGITUDE"/>
+      <viewAttribute id="ADDR_PT_4326"/>
+      <viewAttribute id="lad19nm"/>
+      <viewAttribute id="lad19cd"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="UK_CCG_2019"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="LTLA19CD"/>
+      <viewAttribute id="LTLA19NM"/>
+      <viewAttribute id="UTLA19CD"/>
+      <viewAttribute id="UTLA19NM"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="UK_LA_ULA_LOOKUP"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_1" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="ORGANISATION_CODE"/>
+      <viewAttribute id="NAME"/>
+      <viewAttribute id="NATIONAL_GROUPING"/>
+      <viewAttribute id="HIGH_LEVEL_HEALTH_GEOGRAPHY"/>
+      <viewAttribute id="ADDRESS_LINE_1"/>
+      <viewAttribute id="ADDRESS_LINE_2"/>
+      <viewAttribute id="ADDRESS_LINE_3"/>
+      <viewAttribute id="ADDRESS_LINE_4"/>
+      <viewAttribute id="ADDRESS_LINE_5"/>
+      <viewAttribute id="POSTCODE"/>
+      <viewAttribute id="OPEN_DATE"/>
+      <viewAttribute id="CLOSE_DATE"/>
+      <viewAttribute id="ORGANISATION_SUB_TYPE_CODE"/>
+      <viewAttribute id="AMENDED_RECORD_INDICATOR"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="ADDR_LATITUDE"/>
+      <viewAttribute id="ADDR_LONGITUDE"/>
+      <viewAttribute id="ADDR_PT_4326"/>
+      <viewAttribute id="LTLA19CD"/>
+      <viewAttribute id="LTLA19NM"/>
+      <viewAttribute id="UTLA19CD"/>
+      <viewAttribute id="UTLA19NM"/>
+    
+      <viewAttribute id="lad19nm"/>
+      <viewAttribute hidden="true" id="JOIN$lad19cd$LTLA19CD"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$lad19cd$LTLA19CD" source="lad19cd"/>
+    </input>
+    <input node="Projection_2">
+      <mapping xsi:type="Calculation:AttributeMapping" target="LTLA19CD" source="LTLA19CD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$lad19cd$LTLA19CD" source="LTLA19CD"/>
+    </input>
+    <joinAttribute name="JOIN$lad19cd$LTLA19CD"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="ORGANISATION_CODE"/>
+      <viewAttribute id="NAME"/>
+      <viewAttribute id="NATIONAL_GROUPING"/>
+      <viewAttribute id="HIGH_LEVEL_HEALTH_GEOGRAPHY"/>
+      <viewAttribute id="ADDRESS_LINE_1"/>
+      <viewAttribute id="ADDRESS_LINE_2"/>
+      <viewAttribute id="ADDRESS_LINE_3"/>
+      <viewAttribute id="ADDRESS_LINE_4"/>
+      <viewAttribute id="ADDRESS_LINE_5"/>
+      <viewAttribute id="POSTCODE"/>
+      <viewAttribute id="OPEN_DATE"/>
+      <viewAttribute id="CLOSE_DATE"/>
+      <viewAttribute id="ORGANISATION_SUB_TYPE_CODE"/>
+      <viewAttribute id="AMENDED_RECORD_INDICATOR"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="ADDR_LATITUDE"/>
+      <viewAttribute id="ADDR_LONGITUDE"/>
+      <viewAttribute id="ADDR_PT_4326"/>
+      <viewAttribute id="LTLA19CD"/>
+      <viewAttribute id="LTLA19NM"/>
+      <viewAttribute id="UTLA19CD"/>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19CD"/>
+      <viewAttribute id="RGN19NM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Join_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="LTLA19CD" source="LTLA19CD"/></input>
+    <input node="Projection_3">
+      <mapping xsi:type="Calculation:AttributeMapping" target="LTLA19CD" source="LAD19CD"/>
+    </input>
+    <joinAttribute name="LTLA19CD"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <viewAttributes>
+      <viewAttribute id="RGN19CD"/>
+      <viewAttribute id="RGN19NM"/>
+    
+      <viewAttribute id="LAD19CD"/>
+      <viewAttribute id="LAD19NM"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="UK_LAD_REGION_LOOKUP"/>
+  </calculationView>
+</calculationViews>
+<inlineHierarchy xsi:type="Dimension:LeveledHierarchy" id="Region" aggregateAllNodes="true" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="LEVEL_NAME_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+  <descriptions defaultDescription="Region"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <levels>
+    <level levelAttribute="RGN19NM" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="RGN19NM" sortDirection="ASC"/>
+    <level levelAttribute="UTLA19NM" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="UTLA19NM" sortDirection="ASC"/>
+    <level levelAttribute="LTLA19NM" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="LTLA19NM" sortDirection="ASC"/>
+  </levels>
+</inlineHierarchy>
+<logicalModel id="Join_2">
+  <attributes>
+    <attribute id="ORGANISATION_CODE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORGANISATION_CODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="ORGANISATION_CODE"/>
+    </attribute>
+    <attribute id="NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAME"/>
+    </attribute>
+    <attribute id="NATIONAL_GROUPING" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NATIONAL_GROUPING"/>
+      <keyMapping columnObjectName="Join_2" columnName="NATIONAL_GROUPING"/>
+    </attribute>
+    <attribute id="HIGH_LEVEL_HEALTH_GEOGRAPHY" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HIGH_LEVEL_HEALTH_GEOGRAPHY"/>
+      <keyMapping columnObjectName="Join_2" columnName="HIGH_LEVEL_HEALTH_GEOGRAPHY"/>
+    </attribute>
+    <attribute id="ADDRESS_LINE_1" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS_LINE_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS_LINE_1"/>
+    </attribute>
+    <attribute id="ADDRESS_LINE_2" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS_LINE_2"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS_LINE_2"/>
+    </attribute>
+    <attribute id="ADDRESS_LINE_3" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS_LINE_3"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS_LINE_3"/>
+    </attribute>
+    <attribute id="ADDRESS_LINE_4" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS_LINE_4"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS_LINE_4"/>
+    </attribute>
+    <attribute id="ADDRESS_LINE_5" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS_LINE_5"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS_LINE_5"/>
+    </attribute>
+    <attribute id="POSTCODE" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSTCODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="POSTCODE"/>
+    </attribute>
+    <attribute id="OPEN_DATE" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OPEN_DATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="OPEN_DATE"/>
+    </attribute>
+    <attribute id="CLOSE_DATE" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLOSE_DATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="CLOSE_DATE"/>
+    </attribute>
+    <attribute id="ORGANISATION_SUB_TYPE_CODE" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORGANISATION_SUB_TYPE_CODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="ORGANISATION_SUB_TYPE_CODE"/>
+    </attribute>
+    <attribute id="AMENDED_RECORD_INDICATOR" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AMENDED_RECORD_INDICATOR"/>
+      <keyMapping columnObjectName="Join_2" columnName="AMENDED_RECORD_INDICATOR"/>
+    </attribute>
+    <attribute id="COUNTRY" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY"/>
+      <keyMapping columnObjectName="Join_2" columnName="COUNTRY"/>
+    </attribute>
+    <attribute id="ADDR_LATITUDE" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDR_LATITUDE"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDR_LATITUDE"/>
+    </attribute>
+    <attribute id="ADDR_LONGITUDE" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDR_LONGITUDE"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDR_LONGITUDE"/>
+    </attribute>
+    <attribute id="ADDR_PT_4326" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDR_PT_4326"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDR_PT_4326"/>
+    </attribute>
+    <attribute id="LTLA19CD" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LTLA19CD"/>
+      <keyMapping columnObjectName="Join_2" columnName="LTLA19CD"/>
+    </attribute>
+    <attribute id="LTLA19NM" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LTLA19NM"/>
+      <keyMapping columnObjectName="Join_2" columnName="LTLA19NM"/>
+    </attribute>
+    <attribute id="UTLA19CD" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTLA19CD"/>
+      <keyMapping columnObjectName="Join_2" columnName="UTLA19CD"/>
+    </attribute>
+    <attribute id="UTLA19NM" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTLA19NM"/>
+      <keyMapping columnObjectName="Join_2" columnName="UTLA19NM"/>
+    </attribute>
+    <attribute id="RGN19CD" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RGN19CD"/>
+      <keyMapping columnObjectName="Join_2" columnName="RGN19CD"/>
+    </attribute>
+    <attribute id="RGN19NM" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RGN19NM"/>
+      <keyMapping columnObjectName="Join_2" columnName="RGN19NM"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="328" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="536"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="536"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="118" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="279"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="328" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="279"/>
+    </shape>
+    <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="395" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

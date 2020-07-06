@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="POPULATION" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="POPULATION"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="UK_POPULATION">
+    <resourceUri>UK_POPULATION</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:AggregationView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="CODE"/>
+      <viewAttribute id="NAME"/>
+      <viewAttribute id="GEOGRAPHY"/>
+      <viewAttribute id="ALL_AGES"/>
+      <viewAttribute id="GENDER"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="UK_POPULATION"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="CODE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CODE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CODE"/>
+    </attribute>
+    <attribute id="NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NAME"/>
+    </attribute>
+    <attribute id="GEOGRAPHY" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEOGRAPHY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GEOGRAPHY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="POPULATION" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Population"/>
+      <measureMapping columnObjectName="Projection_1" columnName="ALL_AGES"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="107" y="230"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
