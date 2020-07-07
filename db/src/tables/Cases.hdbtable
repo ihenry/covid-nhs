@@ -6,7 +6,7 @@ COLUMN TABLE "CASES"(
 "Daily lab-confirmed cases" decimal(15,3),
 "Previously reported daily cases" int,
 "Change in daily cases" int,
-"Cumulative lab-confirmed cases" int,
+"Cumulative lab-confirmed cases" decimal(15,3),
 "Previously reported cumulative cases" int,
 "Change in cumulative cases" int,
 "Cumulative lab-confirmed cases rate" decimal(15,3)
