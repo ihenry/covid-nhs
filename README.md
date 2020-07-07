@@ -19,7 +19,7 @@ Updated via Python script England-Covid-Sources.ipynb
 
 https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/
 
-### NHS Pathtways & 111
+### NHS Pathways & 111
 https://digital.nhs.uk/data-and-information/publications/statistical/mi-potential-covid-19-symptoms-reported-through-nhs-pathways-and-111-online/latest
 
 ### Cases
