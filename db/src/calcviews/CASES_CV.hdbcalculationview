@@ -216,7 +216,24 @@
       <keyMapping columnObjectName="Join_2" columnName="POPULATION"/>
     </attribute>
   </attributes>
-  <calculatedAttributes/>
+  <calculatedAttributes>
+    <calculatedAttribute id="LAST_7_FLAG" order="23" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="TINYINT" expressionLanguage="SQL">
+        <formula>CASE 
+    WHEN &quot;Specimen_date&quot; &gt;= ADD_DAYS(now(),-9) THEN 1
+    ELSE 0
+END</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+    <calculatedAttribute id="LAST_30_FLAG" order="24" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="TINYINT" expressionLanguage="SQL">
+        <formula>CASE 
+    WHEN &quot;Specimen_date&quot; &gt;= ADD_DAYS(now(),-32) THEN 1
+    ELSE 0
+END</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  </calculatedAttributes>
   <baseMeasures>
     <measure id="Daily_lab-confirmed_cases" order="5" aggregationType="sum" measureType="simple" engineAggregation="avg">
       <descriptions defaultDescription="Cases_Decimal"/>
@@ -268,6 +285,7 @@ END</formula>
       
       
       
+      
       </measure>
   
     <measure id="NORMALISED_3DAY" order="11" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="5" scale="3" expressionLanguage="SQL">
@@ -280,10 +298,12 @@ END</formula>
       
       
       
+      
       </measure>
   
     <measure id="AGG_RANGE" order="16" aggregationType="count" measureType="simple" datatype="NVARCHAR" length="13" scale="5" expressionLanguage="SQL">
       <formula>&quot;Daily_lab-confirmed_cases_Max&quot;-&quot;Daily_lab-confirmed_cases_Min&quot;</formula>
+      
       
       
       </measure>
@@ -292,12 +312,14 @@ END</formula>
       <descriptions defaultDescription="Cases per 100k"/>
       <formula>(&quot;Daily_lab-confirmed_cases&quot;/&quot;POPULATION_SUM&quot;)*100000</formula>
       
+      
       </measure>
   
     <measure id="CASES_PER_100K_AGG" order="21" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="3" expressionLanguage="SQL">
       <descriptions defaultDescription="Cases per 100k*"/>
       <formula>(&quot;Daily_lab-confirmed_cases&quot;/&quot;POPULATION_DIM&quot;)*100000</formula>
     
+      
       </measure>
   </calculatedMeasures>
   <restrictedMeasures/>

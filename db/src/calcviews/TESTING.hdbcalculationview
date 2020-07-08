@@ -66,6 +66,34 @@ END</formula>
 	 ELSE &quot;Pillar&quot; 
  END</formula>
       </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="DAILY_POSITIVE_CASES_n" datatype="INTEGER" expressionLanguage="SQL">
+    
+        <formula>CASE &quot;Daily_number_of_positive_cases_(new_methodology)&quot; 
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(&quot;Daily_number_of_positive_cases_(new_methodology)&quot;)
+END
+</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="DAILY_POSITIVE_CASES_o" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Daily_number_of_positive_cases_(old_methodology)&quot; 
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(&quot;Daily_number_of_positive_cases_(old_methodology)&quot;)
+END</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="IN_PERSON_TESTS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Daily_In-person_(tests_processed)&quot;
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(REPLACE(&quot;Daily_In-person_(tests_processed)&quot;, ',', ''))
+END</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="TESTS_SENT_OUT" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Daily_Delivery_(tests_sent_out)&quot;
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(REPLACE(&quot;Daily_Delivery_(tests_sent_out)&quot;, ',', ''))
+END</formula>
+      </calculatedViewAttribute>
     </calculatedViewAttributes>
     <input node="TESTING_DATA">
       <mapping xsi:type="Calculation:AttributeMapping" target="Date_of_activity" source="Date of activity"/>
@@ -112,7 +140,17 @@ END</formula>
       <keyMapping columnObjectName="Projection_1" columnName="Pillar"/>
     </attribute>
   </attributes>
-  <calculatedAttributes/>
+  <calculatedAttributes>
+    <calculatedAttribute id="LAST_7_FLAG" order="14" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="TINYINT" expressionLanguage="SQL">
+        <formula>CASE 
+    WHEN &quot;REPORTING_DATE&quot; &gt;= ADD_DAYS(now(),-8) THEN 1
+    ELSE 0
+END
+</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  </calculatedAttributes>
   <baseMeasures>
     <measure id="DAILY_TESTS" order="3" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="DAILY_TESTS"/>
@@ -122,8 +160,37 @@ END</formula>
       <descriptions defaultDescription="CUMULATIVE_TESTS"/>
       <measureMapping columnObjectName="Projection_1" columnName="CUMULATIVE_TESTS"/>
     </measure>
+    <measure id="DAILY_POSITIVE_CASES_n" order="10" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DAILY_POSITIVE_CASES_n"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DAILY_POSITIVE_CASES_n"/>
+    </measure>
+    <measure id="DAILY_POSITIVE_CASES_o" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DAILY_POSITIVE_CASES_o"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DAILY_POSITIVE_CASES_o"/>
+    </measure>
+    <measure id="IN_PERSON_TESTS" order="12" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="IN_PERSON_TESTS"/>
+      <measureMapping columnObjectName="Projection_1" columnName="IN_PERSON_TESTS"/>
+    </measure>
+    <measure id="TESTS_SENT_OUT" order="13" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="TESTS_SENT_OUT"/>
+      <measureMapping columnObjectName="Projection_1" columnName="TESTS_SENT_OUT"/>
+    </measure>
   </baseMeasures>
-  <calculatedMeasures/>
+  <calculatedMeasures>
+    <measure id="POSITIVE_RATIO_n" order="8" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="3" expressionLanguage="SQL">
+      <formula>CASE &quot;DAILY_TESTS&quot; 
+	 WHEN 0 then 0 
+	 ELSE (&quot;DAILY_POSITIVE_CASES_n&quot;/&quot;DAILY_TESTS&quot;)*100 
+ END</formula>
+      </measure>
+    <measure id="POSITIVE_RATIO_o" order="9" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="3" expressionLanguage="SQL">
+      <formula>CASE &quot;DAILY_TESTS&quot; 
+	 WHEN 0 then 0 
+	 ELSE (&quot;DAILY_POSITIVE_CASES_o&quot;/&quot;DAILY_TESTS&quot;)*100 
+ END</formula>
+      </measure>
+  </calculatedMeasures>
   <restrictedMeasures/>
   <localDimensions/>
 </logicalModel>
