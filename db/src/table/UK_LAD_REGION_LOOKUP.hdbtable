@@ -1,0 +1,6 @@
+COLUMN TABLE "table::UK_LAD_REGION_LOOKUP"(
+	LAD19CD Varchar(12),
+	LAD19NM Varchar(128),
+	RGN19CD Varchar(32),
+	RGN19NM Varchar(128),
+	FID int)

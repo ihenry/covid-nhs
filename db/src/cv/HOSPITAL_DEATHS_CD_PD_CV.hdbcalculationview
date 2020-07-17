@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="cv::HOSPITAL_DEATHS_CD_PD" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="HOSPITAL_DEATHS_CD_PD_CV"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="table::HOSPITAL_DEATHS_CURRENT">
+    <resourceUri>table::HOSPITAL_DEATHS_CURRENT</resourceUri>
+  </DataSource>
+  <DataSource id="table::HOSPITAL_DEATHS_PREVIOUS">
+    <resourceUri>table::HOSPITAL_DEATHS_PREVIOUS</resourceUri>
+  </DataSource>
+  <DataSource id="cv::TRUST_LAD_DCV">
+    <resourceUri>cv::TRUST_LAD_DCV</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="REGION"/>
+      <viewAttribute id="REGION_CODE"/>
+      <viewAttribute id="HOSPITAL"/>
+      <viewAttribute id="DATE"/>
+      <viewAttribute id="DEATHS"/>
+      <viewAttribute id="LAST_DOWNLOAD_DATE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="CURRENT_DEATHS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>TO_INT(&quot;DEATHS&quot;)</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="table::HOSPITAL_DEATHS_CURRENT">
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAST_DOWNLOAD_DATE" source="DOWNLOAD_DATE"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="REGION"/>
+      <viewAttribute id="REGION_CODE"/>
+      <viewAttribute id="HOSPITAL"/>
+      <viewAttribute id="DATE"/>
+      <viewAttribute id="DEATHS"/>
+      <viewAttribute id="DOWNLOAD_DATE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="PREVIOUS1_DEATHS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>TO_INT(&quot;DEATHS&quot;)</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="table::HOSPITAL_DEATHS_PREVIOUS"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="REGION"/>
+      <viewAttribute id="REGION_CODE"/>
+      <viewAttribute id="HOSPITAL"/>
+      <viewAttribute id="DATE"/>
+      <viewAttribute id="LAST_DOWNLOAD_DATE"/>
+      <viewAttribute id="CURRENT_DEATHS" aggregationType="sum" datatype="INTEGER"/>
+      <viewAttribute id="PREVIOUS1_DEATHS" aggregationType="sum" datatype="INTEGER"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION_CODE" source="REGION_CODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HOSPITAL" source="HOSPITAL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE" source="DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAST_DOWNLOAD_DATE" source="LAST_DOWNLOAD_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENT_DEATHS" source="CURRENT_DEATHS"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="PREVIOUS1_DEATHS" null="true" value=""/>
+    </input>
+    <input node="Projection_2" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION_CODE" source="REGION_CODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HOSPITAL" source="HOSPITAL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE" source="DATE"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="LAST_DOWNLOAD_DATE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CURRENT_DEATHS" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PREVIOUS1_DEATHS" source="PREVIOUS1_DEATHS"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="REGION"/>
+      <viewAttribute id="REGION_CODE"/>
+      <viewAttribute id="HOSPITAL"/>
+      <viewAttribute id="DATE"/>
+      <viewAttribute id="LAST_DOWNLOAD_DATE"/>
+      <viewAttribute id="CURRENT_DEATHS" aggregationType="sum"/>
+      <viewAttribute id="PREVIOUS1_DEATHS" aggregationType="sum"/>
+      <viewAttribute id="UTLA19NM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Union_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION_CODE" source="REGION_CODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HOSPITAL" source="HOSPITAL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE" source="DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LAST_DOWNLOAD_DATE" source="LAST_DOWNLOAD_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENT_DEATHS" source="CURRENT_DEATHS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PREVIOUS1_DEATHS" source="PREVIOUS1_DEATHS"/>
+    </input>
+    <input node="Projection_3">
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTLA19NM" source="UTLA19NM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION_CODE" source="ParentODSCode"/>
+    </input>
+    <joinAttribute name="REGION_CODE"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <viewAttributes>
+      <viewAttribute id="UTLA19NM"/>
+    
+      <viewAttribute id="ParentODSCode"/></viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="cv::TRUST_LAD_DCV"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="REGION" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Region"/>
+      <keyMapping columnObjectName="Join_1" columnName="REGION"/>
+    </attribute>
+    <attribute id="REGION_CODE" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGION_CODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="REGION_CODE"/>
+    </attribute>
+    <attribute id="HOSPITAL" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hospital Trust"/>
+      <keyMapping columnObjectName="Join_1" columnName="HOSPITAL"/>
+    </attribute>
+    <attribute id="DATE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date"/>
+      <keyMapping columnObjectName="Join_1" columnName="DATE"/>
+    </attribute>
+    <attribute id="LAST_DOWNLOAD_DATE" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOWNLOAD_DATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="LAST_DOWNLOAD_DATE"/>
+    </attribute>
+    <attribute id="UTLA19NM" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTLA19NM"/>
+      <keyMapping columnObjectName="Join_1" columnName="UTLA19NM"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="CURRENT_DEATHS" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Current Deaths"/>
+      <measureMapping columnObjectName="Join_1" columnName="CURRENT_DEATHS"/>
+    </measure>
+    <measure id="PREVIOUS1_DEATHS" order="8" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Previous Deaths"/>
+      <measureMapping columnObjectName="Join_1" columnName="PREVIOUS1_DEATHS"/>
+    </measure>
+  
+    <measure id="LATEST_DOWNLOAD_DATE" order="10" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="Latest Download Date"/>
+      <measureMapping columnObjectName="Join_1" columnName="LAST_DOWNLOAD_DATE"/>
+    </measure>
+    <measure id="LATEST_DATA_DATE" order="11" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="Latest Data Date"/>
+      <measureMapping columnObjectName="Join_1" columnName="DATE"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures>
+    <measure id="DAILY_DEATHS" order="1" aggregationType="sum" measureType="simple" datatype="INTEGER" expressionLanguage="SQL">
+      <descriptions defaultDescription="New Deaths"/>
+      <formula>&quot;CURRENT_DEATHS&quot;-&quot;PREVIOUS1_DEATHS&quot;</formula>
+      
+      </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="241" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-52" y="536"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="292" y="536"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="222" y="341"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="212" y="198"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Union_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="219"/>
+    </shape>
+    <shape modelObjectName="Projection_3" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="462" y="342"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "UK_POPULATION",
+		"target_table": "table::UK_POPULATION",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "UK_population.csv",
+			"file_name": "data::UK_population.csv",
 			"has_header": true,
 			"type_config" : { 
         			"delimiter" : ";" 

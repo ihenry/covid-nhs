@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="cv::TESTING" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TESTING"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="table::TESTING_DATA">
+    <resourceUri>table::TESTING_DATA</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Date_of_activity"/>
+      <viewAttribute id="Daily_number_of_tests_processed"/>
+      <viewAttribute id="Date_of_reporting"/>
+    
+      <viewAttribute id="Pillar"/>
+      <viewAttribute id="Nation"/>
+      <viewAttribute id="Cumulative_number_of_tests_processed"/>
+    
+      <viewAttribute id="Daily_number_of_tests_made_available"/>
+      <viewAttribute id="Cumulative_number_of_tests_made_available"/>
+      <viewAttribute id="Daily_number_of_people_tested_(discontinued)"/>
+      <viewAttribute id="Cumulative_number_of_people_tested_(discontinued)"/>
+      <viewAttribute id="Daily_number_of_positive_cases_(old_methodology)"/>
+      <viewAttribute id="Cumulative_number_of_positive_cases_(old_methodology)"/>
+      <viewAttribute id="Daily_number_of_positive_cases_(new_methodology)"/>
+      <viewAttribute id="Cumulative_number_of_positive_cases_(new_methodology)"/>
+      <viewAttribute id="Daily_In-person_(tests_processed)"/>
+      <viewAttribute id="Cumulative_In-person_(tests_processed)"/>
+      <viewAttribute id="Daily_Delivery_(tests_sent_out)"/>
+      <viewAttribute id="Cumulative_Delivery_(tests_sent_out)"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="ACTIVITY_DATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>CASE &quot;Date_of_activity&quot; 
+	 WHEN 'the ' then ADD_DAYS(&quot;REPORTING_DATE&quot;,-1)
+	 ELSE to_date(&quot;Date_of_activity&quot;,'DD/MM/YYYY') 
+END
+</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="REPORTING_DATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>to_date(&quot;Date_of_reporting&quot;,'DD/MM/YYYY')</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="DAILY_TESTS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Daily_number_of_tests_processed&quot; 
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(REPLACE(&quot;Daily_number_of_tests_processed&quot;, ',', ''))
+END</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="CUMULATIVE_TESTS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Cumulative_number_of_tests_processed&quot; 
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(REPLACE(&quot;Cumulative_number_of_tests_processed&quot;, ',', ''))
+END</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="TEST_TYPE" datatype="NVARCHAR" length="64" expressionLanguage="SQL">
+        <formula>CASE &quot;Pillar&quot; 
+	 WHEN 'Pillar 1' then 'p1 In Person'
+	 WHEN 'Pillar 2' then 'p2 Posted &amp; Drive-through'
+	 WHEN 'Pillar 3' then 'p3 Antibody'
+	 WHEN 'Pillar 4' then 'p4 Research'
+	 WHEN 'Pillar 2 (excluding Wales)' then 'p2 Posted &amp; Drive-through excluding Wales'
+	 WHEN 'Pillar 1 (plus Pillar 2 for Wales)' then 'p1 In Person plus p2 for Wales'
+	 ELSE &quot;Pillar&quot; 
+ END</formula>
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="DAILY_POSITIVE_CASES_n" datatype="INTEGER" expressionLanguage="SQL">
+    
+        <formula>CASE &quot;Daily_number_of_positive_cases_(new_methodology)&quot; 
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(&quot;Daily_number_of_positive_cases_(new_methodology)&quot;)
+END
+</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="DAILY_POSITIVE_CASES_o" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Daily_number_of_positive_cases_(old_methodology)&quot; 
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(&quot;Daily_number_of_positive_cases_(old_methodology)&quot;)
+END</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="IN_PERSON_TESTS" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Daily_In-person_(tests_processed)&quot;
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(REPLACE(&quot;Daily_In-person_(tests_processed)&quot;, ',', ''))
+END</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="TESTS_SENT_OUT" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Daily_Delivery_(tests_sent_out)&quot;
+	 WHEN 'Unavailable' then 0
+     ELSE  TO_INT(REPLACE(&quot;Daily_Delivery_(tests_sent_out)&quot;, ',', ''))
+END</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="table::TESTING_DATA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Date_of_activity" source="Date of activity"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_number_of_tests_processed" source="Daily number of tests processed"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Date_of_reporting" source="Date of reporting"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_number_of_tests_processed" source="Cumulative number of tests processed"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_number_of_tests_made_available" source="Daily number of tests made available"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_number_of_tests_made_available" source="Cumulative number of tests made available"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_number_of_people_tested_(discontinued)" source="Daily number of people tested (discontinued)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_number_of_people_tested_(discontinued)" source="Cumulative number of people tested (discontinued)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_number_of_positive_cases_(old_methodology)" source="Daily number of positive cases (old methodology)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_number_of_positive_cases_(old_methodology)" source="Cumulative number of positive cases (old methodology)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_number_of_positive_cases_(new_methodology)" source="Daily number of positive cases (new methodology)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_number_of_positive_cases_(new_methodology)" source="Cumulative number of positive cases (new methodology)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_In-person_(tests_processed)" source="Daily In-person (tests processed)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_In-person_(tests_processed)" source="Cumulative In-person (tests processed)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_Delivery_(tests_sent_out)" source="Daily Delivery (tests sent out)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_Delivery_(tests_sent_out)" source="Cumulative Delivery (tests sent out)"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="ACTIVITY_DATE" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ACTIVITY_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ACTIVITY_DATE"/>
+    </attribute>
+    <attribute id="REPORTING_DATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REPORTING_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REPORTING_DATE"/>
+    </attribute>
+    <attribute id="TEST_TYPE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TEST_TYPE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TEST_TYPE"/>
+    </attribute>
+    <attribute id="Nation" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Nation"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Nation"/>
+    </attribute>
+    <attribute id="Pillar" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Pillar"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Pillar"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="LAST_7_FLAG" order="14" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="TINYINT" expressionLanguage="SQL">
+        <formula>CASE 
+    WHEN &quot;REPORTING_DATE&quot; &gt;= ADD_DAYS(now(),-8) THEN 1
+    ELSE 0
+END
+</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures>
+    <measure id="DAILY_TESTS" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DAILY_TESTS"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DAILY_TESTS"/>
+    </measure>
+    <measure id="CUMULATIVE_TESTS" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="CUMULATIVE_TESTS"/>
+      <measureMapping columnObjectName="Projection_1" columnName="CUMULATIVE_TESTS"/>
+    </measure>
+    <measure id="DAILY_POSITIVE_CASES_n" order="10" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DAILY_POSITIVE_CASES_n"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DAILY_POSITIVE_CASES_n"/>
+    </measure>
+    <measure id="DAILY_POSITIVE_CASES_o" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DAILY_POSITIVE_CASES_o"/>
+      <measureMapping columnObjectName="Projection_1" columnName="DAILY_POSITIVE_CASES_o"/>
+    </measure>
+    <measure id="IN_PERSON_TESTS" order="12" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="IN_PERSON_TESTS"/>
+      <measureMapping columnObjectName="Projection_1" columnName="IN_PERSON_TESTS"/>
+    </measure>
+    <measure id="TESTS_SENT_OUT" order="13" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="TESTS_SENT_OUT"/>
+      <measureMapping columnObjectName="Projection_1" columnName="TESTS_SENT_OUT"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures>
+    <measure id="POSITIVE_RATIO_n" order="8" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="3" expressionLanguage="SQL">
+      <formula>CASE &quot;DAILY_TESTS&quot; 
+	 WHEN 0 then 0 
+	 ELSE (&quot;DAILY_POSITIVE_CASES_n&quot;/&quot;DAILY_TESTS&quot;)*100 
+ END</formula>
+      </measure>
+    <measure id="POSITIVE_RATIO_o" order="9" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="3" expressionLanguage="SQL">
+      <formula>CASE &quot;DAILY_TESTS&quot; 
+	 WHEN 0 then 0 
+	 ELSE (&quot;DAILY_POSITIVE_CASES_o&quot;/&quot;DAILY_TESTS&quot;)*100 
+ END</formula>
+      </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="45" y="239"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

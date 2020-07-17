@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "UK_LA_ULA_LOOKUP",
+		"target_table": "table::UK_LA_ULA_LOOKUP",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "UK_LA_ULA_April_2019_Lookup_in_England_and_Wales.csv",
+			"file_name": "data::UK_LA_ULA_April_2019_Lookup_in_England_and_Wales.csv",
 			"has_header": true,
 			"type_config" : {
         			"delimiter" : ","

@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-			"target_table": "CASES",
+			"target_table": "table::CASES",
 			"source_data": {
 				"data_type": "CSV",
-				"file_name": "coronavirus-cases_latest.csv",
+				"file_name": "data::coronavirus-cases_latest.csv",
 				"has_header": true,
 				"type_config" : { 
         			"delimiter" : "," 

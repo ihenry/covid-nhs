@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "111_ONLINE",
+		"target_table": "table::111_ONLINE",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "111_Online_latest.csv",
+			"file_name": "data::111_Online_latest.csv",
 			"has_header": true,
 			"type_config" : {
         			"delimiter" : ","

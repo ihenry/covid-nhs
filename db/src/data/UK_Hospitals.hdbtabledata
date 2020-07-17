@@ -3,10 +3,10 @@
 	"format_version": 1,
 
 	"imports": [{
-			"target_table": "UK_HOSPITALS",
+			"target_table": "table::UK_HOSPITALS",
 			"source_data": {
 				"data_type": "CSV",
-				"file_name": "UK_Hospitals.csv",
+				"file_name": "data::UK_Hospitals.csv",
 				"has_header": true,
 				"type_config" : { 
         			"delimiter" : ";" 

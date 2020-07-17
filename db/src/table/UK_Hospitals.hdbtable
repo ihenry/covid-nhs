@@ -1,0 +1,26 @@
+COLUMN TABLE "table::UK_HOSPITALS"(
+"OrganisationID" INTEGER,
+"OrganisationCode" Varchar(5),
+"OrganisationType" Varchar(12),
+"SubType" Varchar(24),
+"Sector" Varchar(32),
+"OrganisationStatus" Varchar(32),
+"OrganisationName" Varchar(128),
+"Address1" Varchar(128),
+"Address2" Varchar(48),
+"Address3" Varchar(48),
+"City" Varchar(48),
+"County" Varchar(48),
+"Latitude" double,
+"Longitude" double,
+"ADDR_PT_4326" ST_POINT(4326),
+"ParentODSCode" Varchar(48),
+"ParentName" Varchar(128),
+"Phone" Varchar(48),
+"Email" Varchar(128),
+"Website" Varchar(128),
+"Fax"	Varchar(24),
+"LOCAL_AUTHORITY"  Varchar(128),
+PRIMARY KEY ("OrganisationID")
+)
+

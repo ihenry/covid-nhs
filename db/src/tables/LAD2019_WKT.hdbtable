@@ -1,6 +1,0 @@
-COLUMN TABLE "LAD2019_WKT" ("objectid" INTEGER ,
-	 "lad19cd" NVARCHAR(9),
-	 "lad19nm" NVARCHAR(36),
-	 "long" DECIMAL(24,15) ,
-	 "lat" DECIMAL(24,15) ,
-	 "SHAPE_WKT" NCLOB);

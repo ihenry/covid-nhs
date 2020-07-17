@@ -1,0 +1,10 @@
+COLUMN TABLE "table::NHS_PATHWAYS"(
+"SiteType" INTEGER,
+"Call Date" Varchar(12),
+"Gender" Varchar(12),
+"AgeBand" Varchar(20),
+"CCGCode" Varchar(12),
+"CCGName" Varchar(128),
+"TriageCount" INTEGER
+--"REAL_DATE" DATE AS TO_DATE("Call Date",'DD/MM/YYYY')
+)

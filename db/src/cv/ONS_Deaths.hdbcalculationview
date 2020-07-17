@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="cv::ONS_Deaths" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="ONS_Deaths"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="table::ONS_DEATHS">
+    <resourceUri>table::ONS_DEATHS</resourceUri>
+  </DataSource>
+  <DataSource id="cv::LAD_REGION_DCV">
+    <resourceUri>cv::LAD_REGION_DCV</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Area_code"/>
+      <viewAttribute id="Geography_type"/>
+      <viewAttribute id="Area_name"/>
+      <viewAttribute id="Cause_of_death"/>
+      <viewAttribute id="Week_number"/>
+      <viewAttribute id="Place_of_death"/>
+      <viewAttribute id="Number_of_deaths"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="ONS_DATE" datatype="DATE" expressionLanguage="SQL">
+        <formula>ADD_DAYS('2019-12-25',(&quot;Week_number&quot;*7))</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="ONS_Covid" datatype="INTEGER" expressionLanguage="SQL">
+        <formula>CASE &quot;Cause_of_death&quot; 
+	 WHEN 'COVID 19' then &quot;Number_of_deaths&quot; 
+	 ELSE null 
+END</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="table::ONS_DEATHS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="Area code"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Geography_type" source="Geography type"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_name" source="Area name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cause_of_death" source="Cause of death"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Week_number" source="Week number"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Place_of_death" source="Place of death"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Number_of_deaths" source="Number of deaths"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="UTLA19CD"/>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19CD"/>
+      <viewAttribute id="RGN19NM"/>
+      <viewAttribute id="LAD19CD"/>
+      <viewAttribute id="LAD19NM"/>
+    
+      <viewAttribute id="POPULATION"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="cv::LAD_REGION_DCV"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="Area_code"/>
+      <viewAttribute id="Geography_type"/>
+      <viewAttribute id="Area_name"/>
+      <viewAttribute id="Cause_of_death"/>
+      <viewAttribute id="Week_number" aggregationType="sum"/>
+      <viewAttribute id="Place_of_death"/>
+      <viewAttribute id="Number_of_deaths" aggregationType="sum"/>
+      <viewAttribute id="ONS_DATE"/>
+      <viewAttribute id="UTLA19NM"/>
+      <viewAttribute id="RGN19NM"/>
+      <viewAttribute id="ONS_Covid" aggregationType="sum"/>
+    
+      <viewAttribute id="POPULATION"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="Area_code"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="Geography_type" source="Geography_type"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_name" source="Area_name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cause_of_death" source="Cause_of_death"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Week_number" source="Week_number"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Place_of_death" source="Place_of_death"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Number_of_deaths" source="Number_of_deaths"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ONS_DATE" source="ONS_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ONS_Covid" source="ONS_Covid"/>
+    </input>
+  
+    <input node="Projection_2">
+  
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTLA19NM" source="UTLA19NM"/>
+  
+      <mapping xsi:type="Calculation:AttributeMapping" target="RGN19NM" source="RGN19NM"/>
+  
+      <mapping xsi:type="Calculation:AttributeMapping" target="POPULATION" source="POPULATION"/>
+  
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="LAD19CD"/>
+  
+    </input>
+    <joinAttribute name="Area_code"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="Area_code" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Area_code"/>
+      <keyMapping columnObjectName="Join_1" columnName="Area_code"/>
+    </attribute>
+    <attribute id="Geography_type" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Geography_type"/>
+      <keyMapping columnObjectName="Join_1" columnName="Geography_type"/>
+    </attribute>
+    <attribute id="Area_name" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Area Name"/>
+      <keyMapping columnObjectName="Join_1" columnName="Area_name"/>
+    </attribute>
+    <attribute id="Cause_of_death" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Cause of Death"/>
+      <keyMapping columnObjectName="Join_1" columnName="Cause_of_death"/>
+    </attribute>
+    <attribute id="Week_number" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Week Number"/>
+      <keyMapping columnObjectName="Join_1" columnName="Week_number"/>
+    </attribute>
+    <attribute id="Place_of_death" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Place of Death"/>
+      <keyMapping columnObjectName="Join_1" columnName="Place_of_death"/>
+    </attribute>
+    <attribute id="ONS_DATE" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ONS Date"/>
+      <keyMapping columnObjectName="Join_1" columnName="ONS_DATE"/>
+    </attribute>
+    <attribute id="UTLA19NM" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Local Authority"/>
+      <keyMapping columnObjectName="Join_1" columnName="UTLA19NM"/>
+    </attribute>
+    <attribute id="RGN19NM" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Region"/>
+      <keyMapping columnObjectName="Join_1" columnName="RGN19NM"/>
+    </attribute>
+  
+    <attribute id="Population" order="12" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POPULATION"/>
+  
+      <keyMapping columnObjectName="Join_1" columnName="POPULATION"/>
+  
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="Number_of_deaths" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ONS All Deaths"/>
+      <measureMapping columnObjectName="Join_1" columnName="Number_of_deaths"/>
+    </measure>
+    <measure id="ONS_Covid" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ONS Covid Deaths"/>
+      <measureMapping columnObjectName="Join_1" columnName="ONS_Covid"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures>
+    <measure id="DEATHS_PER_CAPITA" order="13" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="10" expressionLanguage="SQL">
+      <descriptions defaultDescription="ONS All Deaths Per Capital"/>
+      <formula>&quot;Number_of_deaths&quot;/&quot;Population&quot;</formula>
+      </measure>
+    <measure id="COVID_DEATHS_PER_CAPITA" order="14" aggregationType="sum" measureType="simple" datatype="DECIMAL" length="13" scale="10" expressionLanguage="SQL">
+      <descriptions defaultDescription="ONS Covid Deaths per Capita "/>
+      <formula>&quot;ONS_Covid&quot;/&quot;Population&quot;</formula>
+      </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="235" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="false" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="356"/>
+      <rectangleSize height="30" width="178"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="319" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="235" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+  
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="143"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

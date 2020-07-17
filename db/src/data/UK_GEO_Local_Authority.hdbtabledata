@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "UK_GEO_LOCAL_AUTHORITY",
+		"target_table": "table::UK_GEO_LOCAL_AUTHORITY",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "UK_GEO_LOCAL_AUTHORITY.csv",
+			"file_name": "data::UK_GEO_LOCAL_AUTHORITY.csv",
 			"has_header": true,
 			"type_config" : { 
         			"delimiter" : "," 

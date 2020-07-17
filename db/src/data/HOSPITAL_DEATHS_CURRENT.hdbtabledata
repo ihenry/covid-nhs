@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "HOSPITAL_DEATHS_CURRENT",
+		"target_table": "table::HOSPITAL_DEATHS_CURRENT",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "hospital_deaths_england_current.csv",
+			"file_name": "data::hospital_deaths_england_current.csv",
 			"has_header": true,
 			"type_config" : {
         			"delimiter" : ","

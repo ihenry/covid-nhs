@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "CCG_GEOCODED",
+		"target_table": "table::CCG_GEOCODED",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "CCG_GEOCODED.csv",
+			"file_name": "data::CCG_GEOCODED.csv",
 			"has_header": false,
 			"type_config": {
 				"delimiter": ";"

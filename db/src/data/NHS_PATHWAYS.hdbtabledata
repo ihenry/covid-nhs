@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "NHS_PATHWAYS",
+		"target_table": "table::NHS_PATHWAYS",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "NHSPathwaysCovid-latest.csv",
+			"file_name": "data::NHSPathwaysCovid-latest.csv",
 			"has_header": true
 		},
 		"import_settings": {

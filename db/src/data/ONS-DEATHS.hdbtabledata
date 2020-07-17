@@ -3,10 +3,10 @@
 	"format_version": 1,
 
 	"imports": [{
-			"target_table": "ONS_DEATHS",
+			"target_table": "table::ONS_DEATHS",
 			"source_data": {
 				"data_type": "CSV",
-				"file_name": "ONS-Deaths-Latest.csv",
+				"file_name": "data::ONS-Deaths-Latest.csv",
 				"has_header": true,
 				"type_config" : {
         			"delimiter" : ","

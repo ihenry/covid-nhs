@@ -1,0 +1,7 @@
+COLUMN TABLE "table::111_ONLINE"(
+	"journeydate" Varchar(12),
+	"sex" Varchar(12),
+	"ageband" Varchar(24),
+	"ccgcode" Varchar(12),
+	"ccgname" Varchar(128),
+	"Total" int)

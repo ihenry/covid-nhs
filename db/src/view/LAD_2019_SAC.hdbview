@@ -1,0 +1,3 @@
+VIEW "view::LAD_2019_SAC" AS
+SELECT "lad19cd", "lad19nm", "lat", "long",
+new ST_GEOMETRY('POINT(' || "long" || ' ' ||"lat" || ')', 4326).ST_Transform(3857) AS "SAC_POINT" FROM "table::LAD2019_WKT"

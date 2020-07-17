@@ -1,0 +1,8 @@
+COLUMN TABLE "table::ONS_DEATHS"(
+"Area code"  Varchar(12),
+"Geography type"  Varchar(36),
+"Area name"  Varchar(128),
+"Cause of death"  Varchar(12),
+"Week number" int,
+"Place of death"  Varchar(36),
+"Number of deaths" int)

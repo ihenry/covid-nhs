@@ -1,8 +1,0 @@
-COLUMN TABLE "UK_POPULATION"(
-	CODE Varchar(12),
-	NAME Varchar(128),
-	GEOGRAPHY Varchar(32),
-	ALL_AGES int,
-	AGE int,
-	POPULATION int,
-	GENDER Varchar(7))

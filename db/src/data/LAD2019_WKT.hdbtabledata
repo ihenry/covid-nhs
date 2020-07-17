@@ -2,10 +2,10 @@
 	"format_version": 1,
 
 	"imports": [{
-		"target_table": "LAD2019_WKT",
+		"target_table": "table::LAD2019_WKT",
 		"source_data": {
 			"data_type": "CSV",
-			"file_name": "LAD2019_WKT.csv",
+			"file_name": "data::LAD2019_WKT.csv",
 			"has_header": false
 		},
 		"import_settings": {

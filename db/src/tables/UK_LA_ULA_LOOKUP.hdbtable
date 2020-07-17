@@ -1,6 +1,0 @@
-COLUMN TABLE "UK_LA_ULA_LOOKUP"(
-	LTLA19CD Varchar(12),
-	LTLA19NM Varchar(128),
-	UTLA19CD Varchar(32),
-	UTLA19NM Varchar(128),
-	FID int)
