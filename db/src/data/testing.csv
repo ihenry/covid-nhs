@@ -102,7 +102,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 01/04/2020,02/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),11256,164844,11256,164844,10215,163194,4244,33718,,,,,,
 01/04/2020,02/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),668,2254,668,2254,Unavailable,Unavailable,278,892,,,,,,
 01/04/2020,02/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-01/04/2020,02/04/2020,UK,Pillar 4,23,139,Unavailable,Unavailable,,,,,,,23,139,,
+01/04/2020,02/04/2020,UK,Pillar 4,23,139,23,139,,,,,,,23,139,,
 02/04/2020,03/04/2020,England,Pillar 1,11764,167171,11764,167171,7651,136713,3576,31797,,,,,,
 02/04/2020,03/04/2020,Northern Ireland,Pillar 1,,,,,626,7525,130,904,,,,,,
 02/04/2020,03/04/2020,Scotland,Pillar 1,,,,,1407,19535,399,3001,,,,,,
@@ -110,7 +110,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 02/04/2020,03/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),12854,179190,12854,179190,10590,173784,4450,38168,,,,,,
 02/04/2020,03/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),603,2857,603,2857,Unavailable,Unavailable,222,1114,,,,,,
 02/04/2020,03/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-02/04/2020,03/04/2020,UK,Pillar 4,166,305,Unavailable,Unavailable,,,,,,,166,305,,
+02/04/2020,03/04/2020,UK,Pillar 4,166,305,166,305,,,,,,,166,305,,
 03/04/2020,04/04/2020,England,Pillar 1,10984,178784,10984,178784,6570,143283,2910,34707,,,,,,
 03/04/2020,04/04/2020,Northern Ireland,Pillar 1,,,,,509,8034,94,998,,,,,,
 03/04/2020,04/04/2020,Scotland,Pillar 1,1522,27490,1522,27490,1263,20798,344,3345,,,,,,
@@ -118,7 +118,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 03/04/2020,04/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),13616,219403,13616,219403,9406,183190,3735,41903,,,,,,
 03/04/2020,04/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),677,3534,677,3534,Unavailable,Unavailable,265,1379,,,,,,
 03/04/2020,04/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-03/04/2020,04/04/2020,UK,Pillar 4,336,641,Unavailable,Unavailable,,,,,,,336,641,,
+03/04/2020,04/04/2020,UK,Pillar 4,336,641,336,641,,,,,,,336,641,,
 04/04/2020,05/04/2020,England,Pillar 1,11085,189869,11085,189869,8651,151934,5107,39814,,,,,,
 04/04/2020,05/04/2020,Northern Ireland,Pillar 1,,,,,452,8486,91,1089,,,,,,
 04/04/2020,05/04/2020,Scotland,Pillar 1,3018,30508,3018,30508,2345,23143,361,3706,,,,,,
@@ -126,7 +126,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 04/04/2020,05/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),15103,234506,15103,234506,12334,195524,5903,47806,,,,,,
 04/04/2020,05/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),796,4330,796,4330,Unavailable,Unavailable,296,1675,,,,,,
 04/04/2020,05/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-04/04/2020,05/04/2020,UK,Pillar 4,181,822,Unavailable,Unavailable,,,,,,,181,822,,
+04/04/2020,05/04/2020,UK,Pillar 4,181,822,181,822,,,,,,,181,822,,
 05/04/2020,06/04/2020,England,Pillar 1,9747,199616,9747,199616,5977,157911,3176,42990,,,,,,
 05/04/2020,06/04/2020,Northern Ireland,Pillar 1,,,,,254,8740,69,1158,,,,,,
 05/04/2020,06/04/2020,Scotland,Pillar 1,1006,31514,1006,31514,893,24036,255,3961,,,,,,
@@ -134,7 +134,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 05/04/2020,06/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),11663,246169,11663,246169,7917,203441,3802,51608,,,,,,
 05/04/2020,06/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),1070,5400,1070,5400,Unavailable,Unavailable,341,2016,,,,,,
 05/04/2020,06/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-05/04/2020,06/04/2020,UK,Pillar 4,505,1327,Unavailable,Unavailable,,,,,,,505,1327,,
+05/04/2020,06/04/2020,UK,Pillar 4,505,1327,505,1327,,,,,,,505,1327,,
 06/04/2020,07/04/2020,England,Pillar 1,11065,211313,11065,211313,6944,164855,2978,45968,,,,,,
 06/04/2020,07/04/2020,Northern Ireland,Pillar 1,,,,,418,9158,97,1255,,,,,,
 06/04/2020,07/04/2020,Scotland,Pillar 1,1097,32611,1097,32611,986,25022,268,4229,,,,,,
@@ -142,7 +142,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 06/04/2020,07/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),12858,259659,12858,259659,8949,212390,3634,55242,,,,,,
 06/04/2020,07/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),826,6226,826,6226,Unavailable,Unavailable,254,2270,,,,,,
 06/04/2020,07/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-06/04/2020,07/04/2020,UK,Pillar 4,91,1418,Unavailable,Unavailable,,,,,,,91,1418,,
+06/04/2020,07/04/2020,UK,Pillar 4,91,1418,91,1418,,,,,,,91,1418,,
 07/04/2020,08/04/2020,England,Pillar 1,10917,222230,10917,222230,8900,173755,4788,50756,,,,,,
 07/04/2020,08/04/2020,Northern Ireland,Pillar 1,,,,,406,9564,84,1339,,,,,,
 07/04/2020,08/04/2020,Scotland,Pillar 1,1555,34166,1555,34166,1204,26226,336,4565,,,,,,
@@ -150,7 +150,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 07/04/2020,08/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),13266,272925,13266,272925,11186,223576,5491,60733,,,,,,
 07/04/2020,08/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),1153,7379,1153,7379,Unavailable,Unavailable,374,2644,,,,,,
 07/04/2020,08/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-07/04/2020,08/04/2020,UK,Pillar 4,4,1422,Unavailable,Unavailable,,,,,,,4,1422,,
+07/04/2020,08/04/2020,UK,Pillar 4,4,1422,4,1422,,,,,,,4,1422,,
 08/04/2020,09/04/2020,England,Pillar 1,13529,235759,13529,235759,7843,181598,3798,54554,,,,,,
 08/04/2020,09/04/2020,Northern Ireland,Pillar 1,,,,,639,10203,138,1477,,,,,,
 08/04/2020,09/04/2020,Scotland,Pillar 1,1644,35810,1644,35810,1292,27518,392,4957,,,,,,
@@ -158,7 +158,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 08/04/2020,09/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),15194,288119,15194,288119,9795,233371,4344,65077,,,,,,
 08/04/2020,09/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),1249,8628,1249,8628,Unavailable,Unavailable,331,2975,,,,,,
 08/04/2020,09/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-08/04/2020,09/04/2020,UK,Pillar 4,0,1422,Unavailable,Unavailable,,1422,,,,,0,1422,,
+08/04/2020,09/04/2020,UK,Pillar 4,0,1422,0,1422,,1422,,,,,0,1422,,
 09/04/2020,10/04/2020,England,Pillar 1,14543,250212,14543,250212,8527,190125,4263,58817,,,,,,
 09/04/2020,10/04/2020,Northern Ireland,Pillar 1,,,,,803,11006,112,1589,,,,,,
 09/04/2020,10/04/2020,Scotland,Pillar 1,1391,37201,1391,37201,1134,28652,318,5275,,,,,,
@@ -166,7 +166,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 09/04/2020,10/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),17188,305217,17188,305217,11615,244986,5195,70272,,,,,,
 09/04/2020,10/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),1655,9924,1655,9924,Unavailable,Unavailable,511,3486,,,,,,
 09/04/2020,10/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-09/04/2020,10/04/2020,UK,Pillar 4,273,1695,Unavailable,Unavailable,273,1695,,,,,273,1695,,
+09/04/2020,10/04/2020,UK,Pillar 4,273,1695,273,1695,273,1695,,,,,273,1695,,
 10/04/2020,11/04/2020,England,Pillar 1,13400,263659,13400,263659,7990,198115,3841,62658,,,,,,
 10/04/2020,11/04/2020,Northern Ireland,Pillar 1,,,,,759,11765,128,1717,,,,,,
 10/04/2020,11/04/2020,Scotland,Pillar 1,1580,38781,1580,38781,1251,29903,315,5590,,,,,,
@@ -174,7 +174,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 10/04/2020,11/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),15892,321156,15892,321156,10794,255780,4624,74895,,,,,,
 10/04/2020,11/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),1845,11769,1845,11769,Unavailable,Unavailable,610,4096,,,,,,
 10/04/2020,11/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-10/04/2020,11/04/2020,UK,Pillar 4,354,2049,Unavailable,Unavailable,354,2049,,,,,354,2049,,
+10/04/2020,11/04/2020,UK,Pillar 4,354,2049,354,2049,354,2049,,,,,354,2049,,
 11/04/2020,12/04/2020,England,Pillar 1,12540,276199,12540,276199,7238,205353,3672,66330,,,,,,
 11/04/2020,12/04/2020,Northern Ireland,Pillar 1,,,,,434,12199,89,1806,,,,,,
 11/04/2020,12/04/2020,Scotland,Pillar 1,1475,40256,1475,40256,1211,31114,322,5912,,,,,,
@@ -182,7 +182,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 11/04/2020,12/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),15020,336176,15020,336176,9796,265576,4450,79345,,,,,,
 11/04/2020,12/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2630,14399,2630,14399,Unavailable,Unavailable,838,4934,,,,,,
 11/04/2020,12/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-11/04/2020,12/04/2020,UK,Pillar 4,350,2399,Unavailable,Unavailable,350,2399,,,,,350,2399,,
+11/04/2020,12/04/2020,UK,Pillar 4,350,2399,350,2399,350,2399,,,,,350,2399,,
 12/04/2020,13/04/2020,England,Pillar 1,10374,286573,10374,286573,6467,211820,2999,69329,,,,,,
 12/04/2020,13/04/2020,Northern Ireland,Pillar 1,,,,,434,12633,76,1882,,,,,,
 12/04/2020,13/04/2020,Scotland,Pillar 1,873,41129,873,41129,699,31813,155,6067,,,,,,
@@ -190,7 +190,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 12/04/2020,13/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),12017,348193,12017,348193,8256,273832,3543,82888,,,,,,
 12/04/2020,13/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2489,16888,2489,16888,Unavailable,Unavailable,799,5733,,,,,,
 12/04/2020,13/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-12/04/2020,13/04/2020,UK,Pillar 4,0,2586,Unavailable,Unavailable,,,,,,,0,2586,,
+12/04/2020,13/04/2020,UK,Pillar 4,0,2586,0,2586,,,,,,,0,2586,,
 13/04/2020,14/04/2020,England,Pillar 1,10033,296607,10033,296607,7299,219119,3854,73183,,,,,,
 13/04/2020,14/04/2020,Northern Ireland,Pillar 1,,,,,462,13095,85,1967,,,,,,
 13/04/2020,14/04/2020,Scotland,Pillar 1,1370,42499,1370,42499,1042,32855,291,6358,,,,,,
@@ -198,7 +198,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 13/04/2020,14/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),12081,360275,12081,360275,9393,283225,4468,87356,,,,,,
 13/04/2020,14/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2486,19374,2486,19374,Unavailable,Unavailable,784,6517,,,,,,
 13/04/2020,14/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-13/04/2020,14/04/2020,UK,Pillar 4,415,3001,Unavailable,Unavailable,,,,,,,415,3001,,
+13/04/2020,14/04/2020,UK,Pillar 4,415,3001,415,3001,,,,,,,415,3001,,
 14/04/2020,15/04/2020,England,Pillar 1,11637,308516,11637,308516,6730,225849,3188,76371,,,,,,
 14/04/2020,15/04/2020,Northern Ireland,Pillar 1,,,,,577,13672,121,2088,,,,,,
 14/04/2020,15/04/2020,Scotland,Pillar 1,1610,44109,1610,44109,1209,34064,390,6748,,,,,,
@@ -206,7 +206,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 14/04/2020,15/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),13950,374497,13950,374497,9129,292354,3971,91325,,,,,,
 14/04/2020,15/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2041,21415,2041,21415,Unavailable,Unavailable,634,7151,,,,,,
 14/04/2020,15/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-14/04/2020,15/04/2020,UK,Pillar 4,3,3004,Unavailable,Unavailable,,,,,,,3,3004,,
+14/04/2020,15/04/2020,UK,Pillar 4,3,3004,3,3004,,,,,,,3,3004,,
 15/04/2020,16/04/2020,England,Pillar 1,13704,322288,13704,322288,8942,234791,3118,79489,,,,,,
 15/04/2020,16/04/2020,Northern Ireland,Pillar 1,,,,,568,14240,113,2201,,,,,,
 15/04/2020,16/04/2020,Scotland,Pillar 1,1707,45816,1707,45816,1328,35392,354,7102,,,,,,
@@ -214,7 +214,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 15/04/2020,16/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),16166,390731,16166,390731,11516,303870,3869,95193,,,,,,
 15/04/2020,16/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2323,23738,2323,23738,Unavailable,Unavailable,749,7900,,,,,,
 15/04/2020,16/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-15/04/2020,16/04/2020,UK,Pillar 4,176,3180,Unavailable,Unavailable,,,,,,,176,3180,,
+15/04/2020,16/04/2020,UK,Pillar 4,176,3180,176,3180,,,,,,,176,3180,,
 16/04/2020,17/04/2020,England,Pillar 1,15517,337819,15517,337819,8151,242942,3985,83474,,,,,,
 16/04/2020,17/04/2020,Northern Ireland,Pillar 1,,,,,785,15025,137,2338,,,,,,
 16/04/2020,17/04/2020,Scotland,Pillar 1,1541,47357,1541,47357,1245,36637,307,7409,,,,,,
@@ -222,7 +222,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 16/04/2020,17/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),17763,408508,17763,408508,10800,314670,4673,99866,,,,,,
 16/04/2020,17/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),3143,26881,3143,26881,Unavailable,Unavailable,926,8826,,,,,,
 16/04/2020,17/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-16/04/2020,17/04/2020,UK,Pillar 4,422,3602,Unavailable,Unavailable,,,,,,,422,3602,,
+16/04/2020,17/04/2020,UK,Pillar 4,422,3602,422,3602,,,,,,,422,3602,,
 17/04/2020,18/04/2020,England,Pillar 1,14618,352495,14618,352495,8679,251621,3548,87022,,,,,,
 17/04/2020,18/04/2020,Northern Ireland,Pillar 1,,,,,724,15749,148,2486,,,,,,
 17/04/2020,18/04/2020,Scotland,Pillar 1,1907,49264,1907,49264,1596,38233,411,7820,,,,,,
@@ -230,7 +230,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 17/04/2020,18/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),17308,425873,17308,425873,11699,326369,4399,104264,,,,,,
 17/04/2020,18/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),3773,30654,3773,30654,Unavailable,Unavailable,1127,9953,,,,,,
 17/04/2020,18/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-17/04/2020,18/04/2020,UK,Pillar 4,308,3910,Unavailable,Unavailable,,,,,,,308,3910,,
+17/04/2020,18/04/2020,UK,Pillar 4,308,3910,308,3910,,,,,,,308,3910,,
 18/04/2020,19/04/2020,England,Pillar 1,13849,366344,13849,366344,8084,259705,3607,90629,,,,,,
 18/04/2020,19/04/2020,Northern Ireland,Pillar 1,,,,,741,16490,159,2645,,,,,,
 18/04/2020,19/04/2020,Scotland,Pillar 1,1555,50819,1555,50819,1379,39612,367,8187,,,,,,
@@ -238,7 +238,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 18/04/2020,19/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),16460,442333,16460,442333,11155,337524,4467,108731,,,,,,
 18/04/2020,19/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),4789,35443,4789,35443,Unavailable,Unavailable,1383,11336,,,,,,
 18/04/2020,19/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-18/04/2020,19/04/2020,UK,Pillar 4,377,4287,Unavailable,Unavailable,,,,,,,377,4287,,
+18/04/2020,19/04/2020,UK,Pillar 4,377,4287,377,4287,,,,,,,377,4287,,
 19/04/2020,20/04/2020,England,Pillar 1,11284,377628,11284,377628,6127,265832,2401,93030,,,,,,
 19/04/2020,20/04/2020,Northern Ireland,Pillar 1,,,,,216,15677,83,2728,,,,,,
 19/04/2020,20/04/2020,Scotland,Pillar 1,1255,52074,1255,52074,1088,40700,263,8450,,,,,,
@@ -246,7 +246,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 19/04/2020,20/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),13460,455793,13460,455793,8250,344745,3023,111754,,,,,,
 19/04/2020,20/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),5856,41299,5856,41299,Unavailable,Unavailable,1653,12989,,,,,,
 19/04/2020,20/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-19/04/2020,20/04/2020,UK,Pillar 4,0,4287,Unavailable,Unavailable,,,,,,,0,4287,,
+19/04/2020,20/04/2020,UK,Pillar 4,0,4287,0,4287,,,,,,,0,4287,,
 20/04/2020,21/04/2020,England,Pillar 1,12542,390250,12542,390250,7009,272841,3087,96117,,,,,,
 20/04/2020,21/04/2020,Northern Ireland,Pillar 1,,17692,,17692,236,15913,30,2758,,,,,,
 20/04/2020,21/04/2020,Scotland,Pillar 1,1333,53407,1333,53407,999,41699,222,8672,,,,,,
@@ -254,7 +254,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 20/04/2020,21/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),14908,488473,14908,488473,9169,353914,3643,115397,,,,,,
 20/04/2020,21/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2457,43756,2457,43756,Unavailable,Unavailable,658,13647,,,,,,
 20/04/2020,21/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-20/04/2020,21/04/2020,UK,Pillar 4,605,4892,Unavailable,Unavailable,,,,,,,605,4892,,
+20/04/2020,21/04/2020,UK,Pillar 4,605,4892,605,4892,,,,,,,605,4892,,
 21/04/2020,22/04/2020,England,Pillar 1,16444,406694,16444,406694,7903,280744,3020,99137,,,,,,
 21/04/2020,22/04/2020,Northern Ireland,Pillar 1,556,18248,556,18248,465,16378,116,2874,,,,,,
 21/04/2020,22/04/2020,Scotland,Pillar 1,2099,55506,2099,55506,1610,43309,366,9038,,,,,,
@@ -262,7 +262,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 21/04/2020,22/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),20063,508536,20063,508536,10822,364736,3776,119173,,,,,,
 21/04/2020,22/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2700,46456,2700,46456,Unavailable,Unavailable,675,14322,,,,,,
 21/04/2020,22/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-21/04/2020,22/04/2020,UK,Pillar 4,51,4943,Unavailable,Unavailable,,,,,,,51,4943,,
+21/04/2020,22/04/2020,UK,Pillar 4,51,4943,51,4943,,,,,,,51,4943,,
 22/04/2020,23/04/2020,England,Pillar 1,16233,422928,16233,422928,8573,289317,3084,102221,,,,,,
 22/04/2020,23/04/2020,Northern Ireland,Pillar 1,1006,19254,1006,19254,858,17236,142,3016,,,,,,
 22/04/2020,23/04/2020,Scotland,Pillar 1,2033,57539,2033,57539,1490,44799,371,9409,,,,,,
@@ -270,7 +270,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 22/04/2020,23/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),20088,528625,20088,528625,11644,376380,3831,123004,,,,,,
 22/04/2020,23/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),2985,49441,2985,49441,Unavailable,Unavailable,752,15074,,,,,,
 22/04/2020,23/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-22/04/2020,23/04/2020,UK,Pillar 4,487,5430,Unavailable,Unavailable,,,,,,,487,5430,,
+22/04/2020,23/04/2020,UK,Pillar 4,487,5430,487,5430,,,,,,,487,5430,,
 23/04/2020,24/04/2020,England,Pillar 1,16947,439878,16947,439878,7946,297263,3004,105225,,,,,,
 23/04/2020,24/04/2020,Northern Ireland,Pillar 1,767,20021,767,20021,636,17872,106,3122,,,,,,
 23/04/2020,24/04/2020,Scotland,Pillar 1,1624,59163,1624,59163,1290,46089,288,9697,,,,,,
@@ -278,7 +278,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 23/04/2020,24/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),20365,548993,20365,548993,10742,387122,3641,126645,,,,,,
 23/04/2020,24/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),7659,57100,7659,57100,Unavailable,Unavailable,1745,16819,,,,,,
 23/04/2020,24/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-23/04/2020,24/04/2020,UK,Pillar 4,508,5938,Unavailable,Unavailable,,,,,,,508,5938,,
+23/04/2020,24/04/2020,UK,Pillar 4,508,5938,508,5938,,,,,,,508,5938,,
 24/04/2020,25/04/2020,England,Pillar 1,17489,457368,17489,457368,13323,361085,2826,108051,,,,,,
 24/04/2020,25/04/2020,Northern Ireland,Pillar 1,1132,21153,1132,21153,794,18666,104,3226,,,,,,
 24/04/2020,25/04/2020,Scotland,Pillar 1,2059,61222,2059,61222,1660,47749,354,10051,,,,,,
@@ -286,7 +286,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 24/04/2020,25/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),21981,570975,21981,570975,16871,454492,3583,130228,,,,,,
 24/04/2020,25/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),6244,63344,6244,63344,Unavailable,Unavailable,1330,18149,,,,,,
 24/04/2020,25/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-24/04/2020,25/04/2020,UK,Pillar 4,535,6473,Unavailable,Unavailable,,,,,,,535,6473,,
+24/04/2020,25/04/2020,UK,Pillar 4,535,6473,535,6473,,,,,,,535,6473,,
 25/04/2020,26/04/2020,England,Pillar 1,14835,472203,14835,472203,11603,372688,2152,110203,,,,,,
 25/04/2020,26/04/2020,Northern Ireland,Pillar 1,874,22027,874,22027,686,19352,82,3308,,,,,,
 25/04/2020,26/04/2020,Scotland,Pillar 1,1455,62677,1455,62677,1408,49157,273,10324,,,,,,
@@ -294,7 +294,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 25/04/2020,26/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),17939,588914,17939,588914,14458,468950,2685,132913,,,,,,
 25/04/2020,26/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),11119,74463,11119,74463,Unavailable,Unavailable,1778,19927,,,,,,
 25/04/2020,26/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-25/04/2020,26/04/2020,UK,Pillar 4,0,6473,Unavailable,Unavailable,,,,,,,0,6473,,
+25/04/2020,26/04/2020,UK,Pillar 4,0,6473,0,6473,,,,,,,0,6473,,
 26/04/2020,27/04/2020,England,Pillar 1,14699,486902,14699,486902,10013,382701,2264,112467,,,,,,
 26/04/2020,27/04/2020,Northern Ireland,Pillar 1,754,22781,754,22781,597,19949,66,3374,,,,,,
 26/04/2020,27/04/2020,Scotland,Pillar 1,1265,63942,1265,63942,1137,50294,197,10521,,,,,,
@@ -302,7 +302,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 26/04/2020,27/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),17968,606882,17968,606882,12713,481663,2730,135642,,,,,,
 26/04/2020,27/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),19056,106555,13642,88105,Unavailable,Unavailable,1580,21507,,,13375,86604,5681,19951
 26/04/2020,27/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-26/04/2020,27/04/2020,UK,Pillar 4,0,6473,Unavailable,Unavailable,,,,,,,0,6473,,
+26/04/2020,27/04/2020,UK,Pillar 4,0,6473,0,6473,,,,,,,0,6473,,
 27/04/2020,28/04/2020,England,Pillar 1,13097,500112,13097,500112,11892,394593,1989,114456,,,,,,
 27/04/2020,28/04/2020,Northern Ireland,Pillar 1,595,23376,595,23376,484,20433,34,3408,,,,,,
 27/04/2020,28/04/2020,Scotland,Pillar 1,1557,65499,1557,65499,1155,51449,200,10721,,,,,,
@@ -310,7 +310,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 27/04/2020,28/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),16440,623435,16440,623435,14558,496221,2455,138097,,,,,,
 27/04/2020,28/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),25289,131645,15013,103118,Unavailable,Unavailable,1541,23048,,,10900,97045,14389,34600
 27/04/2020,28/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-27/04/2020,28/04/2020,UK,Pillar 4,1834,8307,Unavailable,Unavailable,,,,,,,1834,8307,,
+27/04/2020,28/04/2020,UK,Pillar 4,1834,8307,1834,8307,,,,,,,1834,8307,,
 28/04/2020,29/04/2020,England,Pillar 1,19526,519639,19526,519639,8811,403404,1403,115859,,,,,,
 28/04/2020,29/04/2020,Northern Ireland,Pillar 1,983,24359,983,24359,780,21213,55,3463,,,,,,
 28/04/2020,29/04/2020,Scotland,Pillar 1,2405,67904,2405,67904,1633,53082,313,11034,,,,,,
@@ -318,7 +318,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 28/04/2020,29/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),23648,647084,23648,647084,11840,508061,1888,139985,,,,,,
 28/04/2020,29/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),28539,162906,21615,124733,Unavailable,Unavailable,2188,25236,,,20063,117108,8476,45798
 28/04/2020,29/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-28/04/2020,29/04/2020,UK,Pillar 4,242,8549,Unavailable,Unavailable,,,,,,,242,8549,,
+28/04/2020,29/04/2020,UK,Pillar 4,242,8549,242,8549,,,,,,,242,8549,,
 29/04/2020,30/04/2020,England,Pillar 1,27283,546922,27283,546922,17557,420961,2484,118343,,,,,,
 29/04/2020,30/04/2020,Northern Ireland,Pillar 1,1419,25778,1419,25778,1115,22328,73,3536,,,,,,
 29/04/2020,30/04/2020,Scotland,Pillar 1,2406,72447,2406,72447,1557,54639,319,11353,,,,,,
@@ -326,7 +326,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 29/04/2020,30/04/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32150,681371,32150,681371,21082,529143,3059,143044,,,,,,
 29/04/2020,30/04/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),48311,210835,33493,158226,Unavailable,Unavailable,2973,28209,,,30166,146042,18145,64793
 29/04/2020,30/04/2020,UK,Pillar 3,,,,,,,,,,,,,,
-29/04/2020,30/04/2020,UK,Pillar 4,1150,9699,Unavailable,Unavailable,,,,,,,1150,9699,,
+29/04/2020,30/04/2020,UK,Pillar 4,1150,9699,1150,9699,,,,,,,1150,9699,,
 30/04/2020,01/05/2020,England,Pillar 1,34807,581729,34807,581729,25755,448491,2501,121006,,,,,,
 30/04/2020,01/05/2020,Northern Ireland,Pillar 1,1319,27097,1319,27097,1053,23381,87,3623,,,,,,
 30/04/2020,01/05/2020,Scotland,Pillar 1,2537,74984,2537,74984,2063,56702,301,11654,,,,,,
@@ -334,7 +334,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 30/04/2020,01/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),39753,721124,39753,721124,29801,560719,3049,146255,,,,,,
 30/04/2020,01/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),79522,289929,43390,201560,Unavailable,Unavailable,3152,31199,,,39153,184767,40369,105162
 30/04/2020,01/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-30/04/2020,01/05/2020,UK,Pillar 4,3072,12771,Unavailable,Unavailable,,,,,,,1072,10771,2000,2000
+30/04/2020,01/05/2020,UK,Pillar 4,3072,12771,1072,10771,,,,,,,1072,10771,2000,2000
 01/05/2020,02/05/2020,England,Pillar 1,33408,615137,33408,615137,24253,472744,2228,123234,,,,,,
 01/05/2020,02/05/2020,Northern Ireland,Pillar 1,1328,28425,1328,28425,1048,24429,66,3689,,,,,,
 01/05/2020,02/05/2020,Scotland,Pillar 1,2921,77905,2921,77905,2131,58833,273,11927,,,,,,
@@ -342,7 +342,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 01/05/2020,02/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),39095,760219,39095,760219,28620,589339,2750,149005,,,,,,
 01/05/2020,02/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),64894,354823,35047,236607,Unavailable,Unavailable,2056,33255,,,32050,216817,32844,138006
 01/05/2020,02/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-01/05/2020,02/05/2020,UK,Pillar 4,1948,14865,Unavailable,Unavailable,,,,,,,751,11522,1197,3343
+01/05/2020,02/05/2020,UK,Pillar 4,1948,14865,751,11522,,,,,,,751,11522,1197,3343
 02/05/2020,03/05/2020,England,Pillar 1,23664,638803,23664,638803,17471,490215,2019,125253,,,,,,
 02/05/2020,03/05/2020,Northern Ireland,Pillar 1,1204,29629,1204,29629,956,25385,78,3767,,,,,,
 02/05/2020,03/05/2020,Scotland,Pillar 1,1986,79891,1986,79891,1462,60295,170,12097,,,,,,
@@ -350,7 +350,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 02/05/2020,03/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),28052,788273,28052,788273,20890,610229,2441,151446,,,,,,
 02/05/2020,03/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),48444,403267,35507,272114,Unavailable,Unavailable,1898,35153,,,25927,242744,22517,160523
 02/05/2020,03/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-02/05/2020,03/05/2020,UK,Pillar 4,0,14865,Unavailable,Unavailable,,,,,,,0,11522,0,3343
+02/05/2020,03/05/2020,UK,Pillar 4,0,14865,0,11522,,,,,,,0,11522,0,3343
 03/05/2020,04/05/2020,England,Pillar 1,21097,659900,21097,659900,16832,507047,1485,126738,,,,,,
 03/05/2020,04/05/2020,Northern Ireland,Pillar 1,1317,30946,1317,30946,1103,26488,69,3836,,,,,,
 03/05/2020,04/05/2020,Scotland,Pillar 1,1949,81840,1949,81840,1401,61696,169,12266,,,,,,
@@ -358,7 +358,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 03/05/2020,04/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),25867,814140,25867,814140,20620,630849,1918,153364,,,,,,
 03/05/2020,04/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),58705,461972,42336,314450,Unavailable,Unavailable,2067,37220,,,42336,285080,16369,176892
 03/05/2020,04/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-03/05/2020,04/05/2020,UK,Pillar 4,614,15479,Unavailable,Unavailable,,,,,,,614,12136,0,3343
+03/05/2020,04/05/2020,UK,Pillar 4,614,15479,614,12136,,,,,,,614,12136,0,3343
 04/05/2020,05/05/2020,England,Pillar 1,22381,684178,22381,684178,21707,528754,1842,128580,,,,,,
 04/05/2020,05/05/2020,Northern Ireland,Pillar 1,1148,32094,1148,32094,848,27336,45,3881,,,,,,
 04/05/2020,05/05/2020,Scotland,Pillar 1,2445,84285,2445,84285,1615,63311,171,12437,,,,,,
@@ -366,7 +366,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 04/05/2020,05/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),26866,842903,26866,842903,24941,655790,2203,155567,,,,,,
 04/05/2020,05/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),51181,513153,44898,359348,Unavailable,Unavailable,2203,39423,,,41127,326207,10054,186946
 04/05/2020,05/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-04/05/2020,05/05/2020,UK,Pillar 4,6759,27786,Unavailable,Unavailable,,,,,,,1359,19043,5400,8743
+04/05/2020,05/05/2020,UK,Pillar 4,6759,27786,1304,18513,,,,,,,1359,19043,5400,8743
 05/05/2020,06/05/2020,England,Pillar 1,27270,711448,27270,711448,20103,548857,1611,130191,,,,,,
 05/05/2020,06/05/2020,Northern Ireland,Pillar 1,1301,33395,1301,33395,1021,28357,53,3934,,,,,,
 05/05/2020,06/05/2020,Scotland,Pillar 1,3036,87321,3036,87321,1814,65125,272,12709,,,,,,
@@ -374,7 +374,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 05/05/2020,06/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32350,875253,32350,875253,23553,679343,2031,157598,,,,,,
 05/05/2020,06/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),34202,547355,33453,392801,Unavailable,Unavailable,4080,43503,,,29315,355522,4887,191833
 05/05/2020,06/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-05/05/2020,06/05/2020,UK,Pillar 4,2911,25402,Unavailable,Unavailable,,,,,,,1641,15389,1270,10013
+05/05/2020,06/05/2020,UK,Pillar 4,2911,25402,1641,15389,,,,,,,1641,15389,1270,10013
 06/05/2020,07/05/2020,England,Pillar 1,27203,738652,27203,738652,20694,569551,2133,132324,,,,,,
 06/05/2020,07/05/2020,Northern Ireland,Pillar 1,1357,34752,1357,34752,1054,29411,50,3984,,,,,,
 06/05/2020,07/05/2020,Scotland,Pillar 1,3174,90495,3174,90495,1972,67097,215,12924,,,,,,
@@ -382,7 +382,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 06/05/2020,07/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32667,907921,32667,907921,24482,703825,2485,160083,,,,,,
 06/05/2020,07/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),49882,597237,40610,435801,Unavailable,Unavailable,3129,46632,,,32335,387857,17547,209380
 06/05/2020,07/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-06/05/2020,07/05/2020,UK,Pillar 4,4034,29375,Unavailable,Unavailable,,,,,,,1484,16873,2550,12502
+06/05/2020,07/05/2020,UK,Pillar 4,4034,29375,1484,16873,,,,,,,1484,16873,2550,12502
 07/05/2020,08/05/2020,England,Pillar 1,27820,766471,27820,766471,20032,589583,1694,134018,,,,,,
 07/05/2020,08/05/2020,Northern Ireland,Pillar 1,1559,36311,1559,36311,1202,30613,38,4022,,,,,,
 07/05/2020,08/05/2020,Scotland,Pillar 1,3075,93570,3075,93570,2094,69191,225,13149,,,,,,
@@ -390,7 +390,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 07/05/2020,08/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),33588,941508,33588,941508,24290,728115,2109,162192,,,,,,
 07/05/2020,08/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),59170,656407,43153,478954,Unavailable,Unavailable,2540,49172,,,31987,403140,27183,253267
 07/05/2020,08/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-07/05/2020,08/05/2020,UK,Pillar 4,4271,33646,Unavailable,Unavailable,,,,,,,1946,18819,2325,14827
+07/05/2020,08/05/2020,UK,Pillar 4,4271,33646,2171,19044,,,,,,,1946,18819,2325,14827
 08/05/2020,09/05/2020,England,Pillar 1,27174,793649,27174,793649,17093,606676,1349,135367,,,,,,
 08/05/2020,09/05/2020,Northern Ireland,Pillar 1,1453,37764,1453,37764,1058,31671,56,4078,,,,,,
 08/05/2020,09/05/2020,Scotland,Pillar 1,2769,96339,2769,96339,1901,71092,156,13305,,,,,,
@@ -398,7 +398,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 08/05/2020,09/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32492,974004,32492,974004,20995,749110,1679,163871,,,,,,
 08/05/2020,09/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),62396,718803,42344,521298,Unavailable,Unavailable,2217,51389,,,26721,429861,35675,288942
 08/05/2020,09/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-08/05/2020,09/05/2020,UK,Pillar 4,1990,35636,Unavailable,Unavailable,,,,,,,1990,20809,0,14827
+08/05/2020,09/05/2020,UK,Pillar 4,1990,35636,3056,22100,,,,,,,1990,20809,0,14827
 09/05/2020,10/05/2020,England,Pillar 1,22738,816387,22738,816387,13971,620647,1007,136374,,,,,,
 09/05/2020,10/05/2020,Northern Ireland,Pillar 1,1220,38984,1220,38984,963,32634,41,4119,,,,,,
 09/05/2020,10/05/2020,Scotland,Pillar 1,2437,98776,2437,98776,1591,72683,181,13486,,,,,,
@@ -406,7 +406,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 09/05/2020,10/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),28412,1002416,28412,1002416,18188,767298,1452,165323,,,,,,
 09/05/2020,10/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),62653,781456,46174,567472,Unavailable,Unavailable,2471,53860,,,38852,468713,23801,312743
 09/05/2020,10/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-09/05/2020,10/05/2020,UK,Pillar 4,1772,37408,Unavailable,Unavailable,,,,,,,1772,22581,0,14827
+09/05/2020,10/05/2020,UK,Pillar 4,1772,37408,2616,24716,,,,,,,1772,22581,0,14827
 10/05/2020,11/05/2020,England,Pillar 1,21548,837935,21548,837935,14896,635543,891,137265,,,,,,
 10/05/2020,11/05/2020,Northern Ireland,Pillar 1,1119,40103,1119,40103,806,33440,30,4149,,,,,,
 10/05/2020,11/05/2020,Scotland,Pillar 1,2346,101122,2346,101122,1380,74063,141,13627,,,,,,
@@ -414,7 +414,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 10/05/2020,11/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),26327,1028743,26327,1028743,18123,785421,1186,166509,,,,,,
 10/05/2020,11/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),71480,852936,47214,614686,Unavailable,Unavailable,2691,56551,,,43265,511978,28215,340958
 10/05/2020,11/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-10/05/2020,11/05/2020,UK,Pillar 4,2683,40091,Unavailable,Unavailable,,,,,,,2683,25264,0,14827
+10/05/2020,11/05/2020,UK,Pillar 4,2683,40091,3401,28117,,,,,,,2683,25264,0,14827
 11/05/2020,12/05/2020,England,Pillar 1,20796,858814,20796,858814,15574,651117,1067,138332,,,,,,
 11/05/2020,12/05/2020,Northern Ireland,Pillar 1,934,41037,934,41037,704,34144,44,4193,,,,,,
 11/05/2020,12/05/2020,Scotland,Pillar 1,2539,103661,2539,103661,1507,75570,136,13763,,,,,,
@@ -422,7 +422,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 11/05/2020,12/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),25462,1054288,25462,1054288,18756,804177,1352,167861,,,,,,
 11/05/2020,12/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),54342,907278,41654,656340,Unavailable,Unavailable,2051,58602,,,26052,538030,28290,369248
 11/05/2020,12/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-11/05/2020,12/05/2020,UK,Pillar 4,5489,45580,Unavailable,Unavailable,,,,,,,2413,27677,3076,17903
+11/05/2020,12/05/2020,UK,Pillar 4,5489,45580,3244,31361,,,,,,,2413,27677,3076,17903
 12/05/2020,13/05/2020,England,Pillar 1,26006,884820,26006,884820,17268,668385,1146,139478,,,,,,
 12/05/2020,13/05/2020,Northern Ireland,Pillar 1,1393,42430,1393,42430,1057,35201,60,4253,,,,,,
 12/05/2020,13/05/2020,Scotland,Pillar 1,3591,107252,3591,107252,2180,77750,166,13929,,,,,,
@@ -430,7 +430,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 12/05/2020,13/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32077,1086365,32077,1086365,21450,825627,1505,169366,,,,,,
 12/05/2020,13/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),48967,956245,40291,696631,Unavailable,Unavailable,1737,60339,,,15292,553322,33675,402923
 12/05/2020,13/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-12/05/2020,13/05/2020,UK,Pillar 4,6019,51599,Unavailable,Unavailable,,,,,,,2043,29720,3976,21879
+12/05/2020,13/05/2020,UK,Pillar 4,6019,51599,2491,33852,,,,,,,2043,29720,3976,21879
 13/05/2020,14/05/2020,England,Pillar 1,25114,910628,25114,910628,18146,686531,1189,140667,,,,,,
 13/05/2020,14/05/2020,Northern Ireland,Pillar 1,1405,43835,1405,43835,1021,36222,38,4291,,,,,,
 13/05/2020,14/05/2020,Scotland,Pillar 1,4009,111261,4009,111261,2525,80275,188,14117,,,,,,
@@ -438,7 +438,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 13/05/2020,14/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),31828,1118887,31828,1118887,22759,848386,1543,170909,,,,,,
 13/05/2020,14/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),72512,1028757,48885,745516,Unavailable,Unavailable,1903,62242,,,28233,581555,44279,447202
 13/05/2020,14/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-13/05/2020,14/05/2020,UK,Pillar 4,21724,71637,Unavailable,Unavailable,,,,,,,1983,31703,19741,39934
+13/05/2020,14/05/2020,UK,Pillar 4,21724,71637,2759,36611,,,,,,,1983,31703,19741,39934
 14/05/2020,15/05/2020,England,Pillar 1,26159,936800,26159,936800,16028,702559,1112,141779,,,,,,
 14/05/2020,15/05/2020,Northern Ireland,Pillar 1,1406,45241,1406,45241,999,37221,26,4317,,,,,,
 14/05/2020,15/05/2020,Scotland,Pillar 1,3221,114482,3221,114482,1991,82266,143,14260,,,,,,
@@ -446,7 +446,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 14/05/2020,15/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32207,1151107,32207,1151107,20202,868588,1407,172316,,,,,,
 14/05/2020,15/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),74487,1103244,49388,794904,Unavailable,Unavailable,2153,64395,,,33760,615315,40727,487929
 14/05/2020,15/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-14/05/2020,15/05/2020,UK,Pillar 4,27090,98727,Unavailable,Unavailable,,,,,,,2420,34123,24670,64604
+14/05/2020,15/05/2020,UK,Pillar 4,27090,98727,3571,40182,,,,,,,2420,34123,24670,64604
 15/05/2020,16/05/2020,England,Pillar 1,29335,966136,29335,966136,22060,724619,1136,142915,,,,,,
 15/05/2020,16/05/2020,Northern Ireland,Pillar 1,1497,46738,1497,46738,1108,38329,40,4357,,,,,,
 15/05/2020,16/05/2020,Scotland,Pillar 1,4840,119322,4840,119322,3338,85604,187,14447,,,,,,
@@ -454,7 +454,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 15/05/2020,16/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),37324,1188430,37324,1188430,27815,896402,1546,173861,,,,,,
 15/05/2020,16/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),67815,1171059,50722,845626,Unavailable,Unavailable,1905,66300,,,32576,647891,35239,523168
 15/05/2020,16/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-15/05/2020,16/05/2020,UK,Pillar 4,31347,130074,Unavailable,Unavailable,,,,,,,4047,38170,27300,91904
+15/05/2020,16/05/2020,UK,Pillar 4,31347,130074,5888,48118,,,,,,,4047,38170,27300,91904
 16/05/2020,17/05/2020,England,Pillar 1,25494,991630,25494,991630,16481,741100,788,143703,,,,,,
 16/05/2020,17/05/2020,Northern Ireland,Pillar 1,1269,48007,1269,48007,930,39259,28,4385,,,,,,
 16/05/2020,17/05/2020,Scotland,Pillar 1,3043,122365,3043,122365,2056,87660,90,14537,,,,,,
@@ -462,7 +462,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 16/05/2020,17/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),31549,1219979,31549,1219979,20901,917303,1068,174929,,,,,,
 16/05/2020,17/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),57920,1228979,56713,902339,Unavailable,Unavailable,2494,68794,,,38960,686851,18960,542128
 16/05/2020,17/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-16/05/2020,17/05/2020,UK,Pillar 4,3006,133080,Unavailable,Unavailable,,,,,,,3006,41176,0,91904
+16/05/2020,17/05/2020,UK,Pillar 4,3006,133080,5091,53209,,,,,,,3006,41176,0,91904
 17/05/2020,18/05/2020,England,Pillar 1,19574,1011204,19574,1011204,13437,754537,816,144519,,,,,,
 17/05/2020,18/05/2020,Northern Ireland,Pillar 1,924,48931,924,48931,659,39918,16,4401,,,,,,
 17/05/2020,18/05/2020,Scotland,Pillar 1,2317,124682,2317,124682,1280,88940,57,14594,,,,,,
@@ -470,7 +470,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 17/05/2020,18/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),24746,1244725,24746,1244725,16865,934168,990,175918,,,,,,
 17/05/2020,18/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),73895,1302874,50544,952883,Unavailable,Unavailable,1694,70488,,,45822,732673,28073,570201
 17/05/2020,18/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-17/05/2020,18/05/2020,UK,Pillar 4,2037,135117,Unavailable,Unavailable,,,,,,,2037,43213,0,91904
+17/05/2020,18/05/2020,UK,Pillar 4,2037,135117,6851,60060,,,,,,,2037,43213,0,91904
 18/05/2020,19/05/2020,England,Pillar 1,23107,1034363,23107,1034363,13955,768492,857,145376,,,,,,
 18/05/2020,19/05/2020,Northern Ireland,Pillar 1,960,49891,960,49891,662,40580,20,4421,,,,,,
 18/05/2020,19/05/2020,Scotland,Pillar 1,2854,127536,2854,127536,1481,90421,61,14655,,,,,,
@@ -478,7 +478,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 18/05/2020,19/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),28835,1273612,28835,1273612,17792,951960,1104,177022,,,,,,
 18/05/2020,19/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),35535,1338409,34193,987076,Unavailable,Unavailable,1308,71796,,,8019,740692,27516,597717
 18/05/2020,19/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-18/05/2020,19/05/2020,UK,Pillar 4,25414,160531,Unavailable,Unavailable,,,,,,,3370,46583,22044,113948
+18/05/2020,19/05/2020,UK,Pillar 4,25414,160531,9504,69564,,,,,,,3370,46583,22044,113948
 19/05/2020,20/05/2020,England,Pillar 1,28611,1057825,28611,1057825,12018,780510,824,145808,,,,,,
 19/05/2020,20/05/2020,Northern Ireland,Pillar 1,1321,51212,1321,51212,890,41470,18,4439,,,,,,
 19/05/2020,20/05/2020,Scotland,Pillar 1,3699,131235,3699,131235,2173,92594,96,14751,,,,,,
@@ -486,7 +486,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 19/05/2020,20/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),35196,1303659,35196,1303659,16287,968247,1048,177678,,,,,,
 19/05/2020,20/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),118419,1474345,44457,1028401,Unavailable,Unavailable,1424,70615,,,38041,796250,80378,678095
 19/05/2020,20/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-19/05/2020,20/05/2020,UK,Pillar 4,23601,184223,Unavailable,Unavailable,,,,,,,2675,49258,20926,134965
+19/05/2020,20/05/2020,UK,Pillar 4,23601,184223,8473,78037,,,,,,,2675,49258,20926,134965
 20/05/2020,21/05/2020,England,Pillar 1,30817,1088641,30817,1088641,19362,799872,854,146662,,,,,,
 20/05/2020,21/05/2020,Northern Ireland,Pillar 1,1546,52758,1546,52758,1084,42554,42,4481,,,,,,
 20/05/2020,21/05/2020,Scotland,Pillar 1,4090,135325,4090,135325,2579,95173,105,14856,,,,,,
@@ -494,7 +494,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 20/05/2020,21/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),38296,1341954,38296,1341954,24574,992821,1167,178845,,,,,,
 20/05/2020,21/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),66224,1540569,43107,1071508,Unavailable,Unavailable,1448,72063,,,25125,821375,41099,719194
 20/05/2020,21/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-20/05/2020,21/05/2020,UK,Pillar 4,23820,208043,Unavailable,Unavailable,,,,,,,2410,51668,21410,156375
+20/05/2020,21/05/2020,UK,Pillar 4,23820,208043,6416,84453,,,,,,,2410,51668,21410,156375
 21/05/2020,22/05/2020,England,Pillar 1,30671,1119321,30671,1119321,19583,819455,1083,147745,,,,,,
 21/05/2020,22/05/2020,Northern Ireland,Pillar 1,1405,54163,1405,54163,1178,43732,23,4504,,,,,,
 21/05/2020,22/05/2020,Scotland,Pillar 1,3858,139183,3858,139183,2434,97607,113,14969,,,,,,
@@ -502,7 +502,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 21/05/2020,22/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),37728,1379691,37728,1379691,24627,1017448,1357,180202,,,,,,
 21/05/2020,22/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),90301,1630870,55670,1127178,Unavailable,Unavailable,1930,73993,,,47243,868618,43058,762252
 21/05/2020,22/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-21/05/2020,22/05/2020,UK,Pillar 4,12468,221360,Unavailable,Unavailable,,,,,,,4627,56295,7841,165065
+21/05/2020,22/05/2020,UK,Pillar 4,12468,221360,14521,98974,,,,,,,4627,56295,7841,165065
 22/05/2020,23/05/2020,England,Pillar 1,28480,1147802,28480,1147802,18847,838302,979,148724,,,,,,
 22/05/2020,23/05/2020,Northern Ireland,Pillar 1,1519,55682,1519,55682,1183,44915,41,4545,,,,,,
 22/05/2020,23/05/2020,Scotland,Pillar 1,3755,142938,3755,142938,2325,99932,72,15041,,,,,,
@@ -510,7 +510,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 22/05/2020,23/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),35915,1415607,35915,1415607,24129,1041577,1277,181479,,,,,,
 22/05/2020,23/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),71657,1702527,48145,1175323,Unavailable,Unavailable,1682,75675,,,31434,900052,40223,802475
 22/05/2020,23/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-22/05/2020,23/05/2020,UK,Pillar 4,9013,230373,Unavailable,Unavailable,,,,,,,2737,59032,6276,171341
+22/05/2020,23/05/2020,UK,Pillar 4,9013,230373,8083,107057,,,,,,,2737,59032,6276,171341
 23/05/2020,24/05/2020,England,Pillar 1,25548,1173347,25548,1173347,15423,853725,584,149308,,,,,,
 23/05/2020,24/05/2020,Northern Ireland,Pillar 1,1370,57052,1370,57052,1080,45995,25,4570,,,,,,
 23/05/2020,24/05/2020,Scotland,Pillar 1,2886,145824,2886,145824,1781,101713,60,15101,,,,,,
@@ -518,7 +518,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 23/05/2020,24/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32230,1447834,32230,1447834,20301,1061878,809,182288,,,,,,
 23/05/2020,24/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),74838,1777365,47672,1222995,Unavailable,Unavailable,1600,77271,,,34740,934792,40098,842573
 23/05/2020,24/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-23/05/2020,24/05/2020,UK,Pillar 4,3333,233706,Unavailable,Unavailable,,,,,,,3333,62365,0,171341
+23/05/2020,24/05/2020,UK,Pillar 4,3333,233706,12410,119467,,,,,,,3333,62365,0,171341
 24/05/2020,25/05/2020,England,Pillar 1,19911,1193261,19911,1193261,12423,866148,494,149802,,,,,,
 24/05/2020,25/05/2020,Northern Ireland,Pillar 1,1084,58136,1084,58136,847,46842,39,4609,,,,,,
 24/05/2020,25/05/2020,Scotland,Pillar 1,3401,149225,3401,149225,1795,103508,55,15156,,,,,,
@@ -526,7 +526,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 24/05/2020,25/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),27475,1475312,27475,1475312,17473,1079351,694,182982,,,,,,
 24/05/2020,25/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),46251,1823616,24369,1247364,Unavailable,Unavailable,931,78202,,,8236,943028,38015,880588
 24/05/2020,25/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-24/05/2020,25/05/2020,UK,Pillar 4,0,233706,Unavailable,Unavailable,,,,,,,0,62365,0,171341
+24/05/2020,25/05/2020,UK,Pillar 4,0,233706,7789,127256,,,,,,,0,62365,0,171341
 25/05/2020,26/05/2020,England,Pillar 1,19845,1213107,19845,1213107,12097,878245,492,150294,,,,,,
 25/05/2020,26/05/2020,Northern Ireland,Pillar 1,928,59064,928,59064,687,47529,28,4637,,,,,,
 25/05/2020,26/05/2020,Scotland,Pillar 1,2977,152202,2977,152202,1372,104880,29,15185,,,,,,
@@ -534,7 +534,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 25/05/2020,26/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),26780,1502093,26780,1502093,16579,1095930,690,183672,,,,,,
 25/05/2020,26/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),78637,1938480,42601,1357470,Unavailable,Unavailable,1314,81555,,,29134,1008389,49503,930091
 25/05/2020,26/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-25/05/2020,26/05/2020,UK,Pillar 4,4562,240722,Unavailable,Unavailable,,,,,,,2562,67381,2000,173341
+25/05/2020,26/05/2020,UK,Pillar 4,4562,240722,9097,138807,,,,,,,2562,67381,2000,173341
 26/05/2020,27/05/2020,England,Pillar 1,22511,1235794,22511,1235794,25433,903678,609,150903,,,,,,
 26/05/2020,27/05/2020,Northern Ireland,Pillar 1,1241,60305,1241,60305,845,48374,26,4663,,,,,,
 26/05/2020,27/05/2020,Scotland,Pillar 1,3750,155952,3750,155952,2104,106984,55,15240,,,,,,
@@ -542,7 +542,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 26/05/2020,27/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),29708,1531977,29708,1531977,30278,1126208,787,184459,,,,,,
 26/05/2020,27/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),84797,2023277,34057,1391527,Unavailable,Unavailable,1226,82781,,,16485,1024874,68312,998403
 26/05/2020,27/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-26/05/2020,27/05/2020,UK,Pillar 4,2508,243236,Unavailable,Unavailable,,,,,,,2505,69886,3,173350
+26/05/2020,27/05/2020,UK,Pillar 4,2508,243236,14334,153141,,,,,,,2505,69886,3,173350
 27/05/2020,28/05/2020,England,Pillar 1,29148,1264942,29148,1264942,19340,923018,519,151422,,,,,,
 27/05/2020,28/05/2020,Northern Ireland,Pillar 1,1392,61697,1392,61697,1067,49441,16,4679,,,,,,
 27/05/2020,28/05/2020,Scotland,Pillar 1,3575,159527,3575,159527,2047,109031,48,15288,,,,,,
@@ -550,7 +550,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 27/05/2020,28/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),35670,1567647,35670,1567647,23670,1149878,655,185114,,,,,,
 27/05/2020,28/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),75850,2099127,34659,1426186,Unavailable,Unavailable,1232,84013,,,26615,1051489,49235,1047638
 27/05/2020,28/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-27/05/2020,28/05/2020,UK,Pillar 4,8067,251305,Unavailable,Unavailable,,,,,,,2450,72338,5617,178967
+27/05/2020,28/05/2020,UK,Pillar 4,8067,251305,12685,165828,,,,,,,2450,72338,5617,178967
 28/05/2020,29/05/2020,England,Pillar 1,29609,1294552,29609,1294552,16292,939310,560,151982,,,,,,
 28/05/2020,29/05/2020,Northern Ireland,Pillar 1,1346,63043,1346,63043,1083,50524,17,4696,,,,,,
 28/05/2020,29/05/2020,Scotland,Pillar 1,4235,163762,4235,163762,2054,111085,39,15327,,,,,,
@@ -558,7 +558,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 28/05/2020,29/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),37933,1605581,37933,1605581,21719,1171597,718,185832,,,,,,
 28/05/2020,29/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),88691,2181966,46701,1472887,Unavailable,Unavailable,1377,85390,,,36393,1082030,52298,1099936
 28/05/2020,29/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-28/05/2020,29/05/2020,UK,Pillar 4,4834,256139,Unavailable,Unavailable,,,,,,,4821,77159,13,178980
+28/05/2020,29/05/2020,UK,Pillar 4,4834,256139,18100,183928,,,,,,,4821,77159,13,178980
 29/05/2020,30/05/2020,England,Pillar 1,30139,1324691,30139,1324691,16199,955509,715,151856,,,,,,
 29/05/2020,30/05/2020,Northern Ireland,Pillar 1,1247,64290,1247,64290,849,51373,13,4709,,,,,,
 29/05/2020,30/05/2020,Scotland,Pillar 1,3299,167061,3299,167061,1899,112984,55,15382,,,,,,
@@ -566,7 +566,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 29/05/2020,30/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),37085,1642666,37085,1642666,20819,1192416,869,185860,,,,,,
 29/05/2020,30/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),85417,2267383,58465,1531352,Unavailable,Unavailable,1576,86966,,,40959,1122989,44458,1144394
 29/05/2020,30/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-29/05/2020,30/05/2020,UK,Pillar 4,5220,261359,Unavailable,Unavailable,,,,,,,3720,80879,1500,180480
+29/05/2020,30/05/2020,UK,Pillar 4,5220,261359,11002,194930,,,,,,,3720,80879,1500,180480
 30/05/2020,31/05/2020,England,Pillar 1,24823,1349517,24823,1349517,14784,970293,320,152176,,,,,,
 30/05/2020,31/05/2020,Northern Ireland,Pillar 1,1238,65528,1238,65528,924,52297,7,4716,,,,,,
 30/05/2020,31/05/2020,Scotland,Pillar 1,2588,169649,2588,169649,1338,114322,18,15400,,,,,,
@@ -574,7 +574,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 30/05/2020,31/05/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),31755,1674424,31755,1674424,19590,1212006,427,186287,,,,,,
 30/05/2020,31/05/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),80796,2346781,58112,1589464,Unavailable,Unavailable,1509,88475,,,38657,1156641,42139,1190140
 30/05/2020,31/05/2020,UK,Pillar 3,,,,,,,,,,,,,,
-30/05/2020,31/05/2020,UK,Pillar 4,3174,264533,Unavailable,Unavailable,,,,,,,3174,84053,0,180480
+30/05/2020,31/05/2020,UK,Pillar 4,3174,264533,7520,202450,,,,,,,3174,84053,0,180480
 31/05/2020,01/06/2020,England,Pillar 1,21332,1370849,21332,1370849,11149,981442,294,152470,,,,,,
 31/05/2020,01/06/2020,Northern Ireland,Pillar 1,"1,147","66,675",1147,66675,824,"53,121",12,"4,728",,,,,,
 31/05/2020,01/06/2020,Scotland,Pillar 1,"2,096","171,745",2096,171745,937,"115,259",18,"15,418",,,,,,
@@ -582,7 +582,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 31/05/2020,01/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),27520,1701944,27520,1701944,15371,1227377,383,186670,,,,,,
 31/05/2020,01/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),73144,2424451,47743,1637207,Unavailable,Unavailable,1187,89662,,,29414,1189776,43730,1234675
 31/05/2020,01/06/2020,UK,Pillar 3,23110,88731,23110,88731,,,,,,,,,,
-31/05/2020,01/06/2020,UK,Pillar 4,4663,269214,Unavailable,Unavailable,,,,,,,1663,85716,3000,183498
+31/05/2020,01/06/2020,UK,Pillar 4,4663,269214,7061,210396,,,,,,,1663,85716,3000,183498
 01/06/2020,02/06/2020,England,Pillar 1,23240,1394048,23240,1394048,16468,997910,444,152914,,,,,,
 01/06/2020,02/06/2020,Northern Ireland,Pillar 1,831,"67,506",831,67506,583,"53,704",4,"4,732",,,,,,
 01/06/2020,02/06/2020,Scotland,Pillar 1,"3,435","175,180",3435,175180,"1,589","116,848",13,"15,471",,,,,,
@@ -590,7 +590,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 01/06/2020,02/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),29998,1731901,29998,1731901,20669,1248046,528,187238,,,,,,
 01/06/2020,02/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),69605,2489260,34765,1671972,Unavailable,Unavailable,1085,90747,,,24847,1209249,44758,1280011
 01/06/2020,02/06/2020,UK,Pillar 3,30357,119088,30357,119088,,,,,,,,,,
-01/06/2020,02/06/2020,UK,Pillar 4,5683,274897,Unavailable,Unavailable,,,,,,,3311,89027,2372,185870
+01/06/2020,02/06/2020,UK,Pillar 4,5683,274897,6451,216847,,,,,,,3311,89027,2372,185870
 02/06/2020,03/06/2020,England,Pillar 1,30828,1425263,30828,1425263,14600,1012510,462,153376,,,,,,
 02/06/2020,03/06/2020,Northern Ireland,Pillar 1,1294,68800,1294,68800,888,54592,8,4740,,,,,,
 02/06/2020,03/06/2020,Scotland,Pillar 1,3641,178821,3641,178821,1725,118573,33,15504,,,,,,
@@ -598,7 +598,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 02/06/2020,03/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),38163,1770451,38163,1770451,19053,1267099,585,187823,,,,,,
 02/06/2020,03/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),94735,2582681,48104,1720076,Unavailable,Unavailable,1286,92033,,,34526,1242284,60209,1340397
 02/06/2020,03/06/2020,UK,Pillar 3,36013,155344,36013,155344,,,,,,,,,,
-02/06/2020,03/06/2020,UK,Pillar 4,2918,277743,Unavailable,Unavailable,,,,,,,2918,91945,0,185798
+02/06/2020,03/06/2020,UK,Pillar 4,2918,277743,6903,223750,,,,,,,2918,91945,0,185798
 03/06/2020,04/06/2020,England,Pillar 1,31443,1456835,31443,1456835,17499,1030009,431,153807,,,,,,
 03/06/2020,04/06/2020,Northern Ireland,Pillar 1,1856,70656,1856,70656,1317,55909,33,4773,,,,,,
 03/06/2020,04/06/2020,Scotland,Pillar 1,3834,182655,3834,182655,2028,120601,49,15553,,,,,,
@@ -606,7 +606,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 03/06/2020,04/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),39735,1810315,39735,1810315,22977,1290076,548,188371,,,,,,
 03/06/2020,04/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),136584,2719687,56939,1777015,Unavailable,Unavailable,1257,93290,,,40110,1281026,96474,1438661
 03/06/2020,04/06/2020,UK,Pillar 3,40385,194467,40385,194467,,,,,,,,,,
-03/06/2020,04/06/2020,UK,Pillar 4,3353,281096,Unavailable,Unavailable,,,,,,,3353,95298,0,185798
+03/06/2020,04/06/2020,UK,Pillar 4,3353,281096,6384,230134,,,,,,,3353,95298,0,185798
 04/06/2020,05/06/2020,England,Pillar 1,30907,1487742,30907,1487742,15367,1045376,451,154258,,,,,,
 04/06/2020,05/06/2020,Northern Ireland,Pillar 1,1500,72156,1500,72156,1098,57007,3,4776,,,,,,
 04/06/2020,05/06/2020,Scotland,Pillar 1,4180,186835,4180,186835,2161,122762,29,15582,,,,,,
@@ -614,7 +614,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 04/06/2020,05/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),39593,1849908,39593,1849908,21109,1311185,559,188930,,,,,,
 04/06/2020,05/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),120027,2840039,55852,1832867,Unavailable,Unavailable,1091,94381,,,37015,1317562,83012,1522477
 04/06/2020,05/06/2020,UK,Pillar 3,42899,238522,42899,238522,,,,,,,,,,
-04/06/2020,05/06/2020,UK,Pillar 4,4712,285808,Unavailable,Unavailable,,,,,,,4712,100010,0,185798
+04/06/2020,05/06/2020,UK,Pillar 4,4712,285808,5880,236014,,,,,,,4712,100010,0,185798
 05/06/2020,06/06/2020,England,Pillar 1,29469,1518181,29469,1518181,19123,1064499,422,154680,,,,,,
 05/06/2020,06/06/2020,Northern Ireland,Pillar 1,1536,73692,1536,73692,1120,58127,14,4790,,,,,,
 05/06/2020,06/06/2020,Scotland,Pillar 1,3552,190387,3552,190387,1781,124543,21,15603,,,,,,
@@ -622,7 +622,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 05/06/2020,06/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),37693,1888571,37693,1888571,24579,1335764,499,189429,,,,,,
 05/06/2020,06/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),134840,2979774,60974,1893841,Unavailable,Unavailable,1058,95439,,,44696,1361830,90144,1617944
 05/06/2020,06/06/2020,UK,Pillar 3,41619,280524,41619,280524,,,,,,,,,,
-05/06/2020,06/06/2020,UK,Pillar 4,4035,289843,Unavailable,Unavailable,,,,,,,4035,104045,0,185798
+05/06/2020,06/06/2020,UK,Pillar 4,4035,289843,4723,241346,,,,,,,4035,104045,0,185798
 06/06/2020,07/06/2020,England,Pillar 1,27694,1546327,27694,1546327,16835,1081334,228,154908,,,,,,
 06/06/2020,07/06/2020,Northern Ireland,Pillar 1,1165,74857,1165,74857,899,59026,6,4796,,,,,,
 06/06/2020,07/06/2020,Scotland,Pillar 1,2908,193295,2908,193295,1469,126012,18,15621,,,,,,
@@ -630,7 +630,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 06/06/2020,07/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),35636,1924659,35636,1924659,22441,1358205,292,189721,,,,,,
 06/06/2020,07/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),79685,3059225,54926,1948767,Unavailable,Unavailable,1034,96473,,,40958,1402554,38727,1656671
 06/06/2020,07/06/2020,UK,Pillar 3,22720,303264,22720,303264,,,,,,,,,,
-06/06/2020,07/06/2020,UK,Pillar 4,4082,293925,Unavailable,Unavailable,,,,,,,4082,108127,0,185798
+06/06/2020,07/06/2020,UK,Pillar 4,4082,293925,4299,245645,,,,,,,4082,108127,0,185798
 07/06/2020,08/06/2020,England,Pillar 1,23540,1569977,23540,1569977,9532,1090866,92,155000,,,,,,
 07/06/2020,08/06/2020,Northern Ireland,Pillar 1,1338,76195,1338,76195,959,59985,6,4802,,,,,,
 07/06/2020,08/06/2020,Scotland,Pillar 1,2651,195946,2651,195946,1192,127204,18,15639,,,,,,
@@ -638,7 +638,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 07/06/2020,08/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),30792,1955561,30792,1955561,14362,1372567,158,189879,,,,,,
 07/06/2020,08/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),87221,3155973,52998,2001765,Unavailable,Unavailable,1047,97520,,,39282,1441214,47939,1714759
 07/06/2020,08/06/2020,UK,Pillar 3,16694,320871,16694,320871,,,,,,,,,,
-07/06/2020,08/06/2020,UK,Pillar 4,3476,299171,Unavailable,Unavailable,,,,,,,3476,111603,0,187568
+07/06/2020,08/06/2020,UK,Pillar 4,3476,299171,3638,249283,,,,,,,3476,111603,0,187568
 08/06/2020,09/06/2020,England,Pillar 1,25035,1595012,25035,1595012,19096,1109962,651,155651,,,,,,
 08/06/2020,09/06/2020,Northern Ireland,Pillar 1,1004,77199,1004,77199,702,60687,3,4805,,,,,,
 08/06/2020,09/06/2020,Scotland,Pillar 1,3059,199005,3059,199005,1291,128495,14,15653,,,,,,
@@ -646,7 +646,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 08/06/2020,09/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),32206,1987767,32206,1987767,23498,1396065,710,190589,,,,,,
 08/06/2020,09/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),38934,3230178,34563,2071781,Unavailable,Unavailable,677,98551,,,13775,1489778,25159,1740400
 08/06/2020,09/06/2020,UK,Pillar 3,27978,349578,27978,349578,,,,,,,,,,
-08/06/2020,09/06/2020,UK,Pillar 4,3812,302983,Unavailable,Unavailable,,,,,,,3157,114760,655,188223
+08/06/2020,09/06/2020,UK,Pillar 4,3812,302983,3698,252981,,,,,,,3157,114760,655,188223
 09/06/2020,10/06/2020,England,Pillar 1,35187,1630199,35187,1630199,16982,1126944,63,155714,,,,,,
 09/06/2020,10/06/2020,Northern Ireland,Pillar 1,1242,78441,1242,78441,831,61518,13,4818,,,,,,
 09/06/2020,10/06/2020,Scotland,Pillar 1,3335,202340,3335,202340,1609,130104,12,15665,,,,,,
@@ -654,7 +654,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 09/06/2020,10/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),43052,2030819,43052,2030819,22248,1418313,126,190715,,,,,,
 09/06/2020,10/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),86013,3317669,48554,2120335,Unavailable,Unavailable,877,99428,,,33760,1523390,52253,1794279
 09/06/2020,10/06/2020,UK,Pillar 3,37147,386984,37147,386984,,,,,,,,,,
-09/06/2020,10/06/2020,UK,Pillar 4,4167,307150,Unavailable,Unavailable,,,,,,,3442,118202,725,188948
+09/06/2020,10/06/2020,UK,Pillar 4,4167,307150,4349,257330,,,,,,,3442,118202,725,188948
 10/06/2020,11/06/2020,England,Pillar 1,34290,1664564,34290,1664564,17645,1144589,304,156018,,,,,,
 10/06/2020,11/06/2020,Northern Ireland,Pillar 1,1690,80131,1690,80131,1185,62703,4,4822,,,,,,
 10/06/2020,11/06/2020,Scotland,Pillar 1,3896,206236,3896,206236,1897,132001,17,15682,,,,,,
@@ -662,7 +662,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 10/06/2020,11/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),43200,2074094,43200,2074094,23436,1441749,388,191103,,,,,,
 10/06/2020,11/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),105993,3424261,54652,2174987,Unavailable,Unavailable,878,100306,,,36782,1559816,69211,1864445
 10/06/2020,11/06/2020,UK,Pillar 3,42979,430461,42979,430461,,,,,,,,,,
-10/06/2020,11/06/2020,UK,Pillar 4,4835,311985,Unavailable,Unavailable,,,,,,,4035,122237,800,189748
+10/06/2020,11/06/2020,UK,Pillar 4,4835,311985,4678,262008,,,,,,,4035,122237,800,189748
 11/06/2020,12/06/2020,England,Pillar 1,31130,1696954,31130,1696954,18347,1162936,392,156410,,,,,,
 11/06/2020,12/06/2020,Northern Ireland,Pillar 1,1330,81461,1330,81461,886,63589,16,4838,,,,,,
 11/06/2020,12/06/2020,Scotland,Pillar 1,3917,210153,3917,210153,1893,133894,27,15709,,,,,,
@@ -670,7 +670,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 11/06/2020,12/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),40058,2115412,40058,2115412,23703,1465452,512,191615,,,,,,
 11/06/2020,12/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),102379,3525498,58855,2233842,Unavailable,Unavailable,1029,101335,,,42406,1600450,59973,1925048
 11/06/2020,12/06/2020,UK,Pillar 3,46491,477493,46491,477493,,,,,,,,,,
-11/06/2020,12/06/2020,UK,Pillar 4,4325,316310,Unavailable,Unavailable,,,,,,,3590,125827,735,190483
+11/06/2020,12/06/2020,UK,Pillar 4,4325,316310,3940,265948,,,,,,,3590,125827,735,190483
 12/06/2020,13/06/2020,England,Pillar 1,30837,1728596,30837,1728596,18590,1181526,372,156782,,,,,,
 12/06/2020,13/06/2020,Northern Ireland,Pillar 1,1354,82815,1354,82815,995,64584,3,4841,,,,,,
 12/06/2020,13/06/2020,Scotland,Pillar 1,4323,214476,4323,214476,2252,136146,21,15730,,,,,,
@@ -678,7 +678,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 12/06/2020,13/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),40426,2156643,40426,2156643,24634,1490086,441,192056,,,,,,
 12/06/2020,13/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),96709,3621996,54790,2288632,Unavailable,Unavailable,984,102319,,,35720,1635417,60989,1986579
 12/06/2020,13/06/2020,UK,Pillar 3,46952,525020,46952,525020,,,,,,,,,,
-12/06/2020,13/06/2020,UK,Pillar 4,4707,321017,Unavailable,Unavailable,,,,,,,3897,129724,810,191293
+12/06/2020,13/06/2020,UK,Pillar 4,4707,321017,4931,270879,,,,,,,3897,129724,810,191293
 13/06/2020,14/06/2020,England,Pillar 1,30577,1760028,30577,1760028,16043,1197569,292,157074,,,,,,
 13/06/2020,14/06/2020,Northern Ireland,Pillar 1,1189,84004,1189,84004,749,65333,7,4848,,,,,,
 13/06/2020,14/06/2020,Scotland,Pillar 1,3138,217614,3138,217614,1492,137638,25,15755,,,,,,
@@ -686,7 +686,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 13/06/2020,14/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),37983,2195481,37983,2195481,20501,1510587,363,192419,,,,,,
 13/06/2020,14/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),82560,3704325,58061,2346693,Unavailable,Unavailable,1151,103470,,,37264,1672450,45296,2031875
 13/06/2020,14/06/2020,UK,Pillar 3,21337,548794,21337,548794,,,,,,,,,,
-13/06/2020,14/06/2020,UK,Pillar 4,2985,324002,Unavailable,Unavailable,,,,,,,2985,132709,0,191293
+13/06/2020,14/06/2020,UK,Pillar 4,2985,324002,3028,273907,,,,,,,2985,132709,0,191293
 14/06/2020,15/06/2020,England,Pillar 1,23632,1784512,23632,1784512,14581,1212150,219,157293,,,,,,
 14/06/2020,15/06/2020,Northern Ireland,Pillar 1,1005,85009,1005,85009,720,66053,4,4852,,,,,,
 14/06/2020,15/06/2020,Scotland,Pillar 1,2963,220577,2963,220577,1304,137108,20,15687,,,,,,
@@ -694,7 +694,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 14/06/2020,15/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),30700,2227033,30700,2227033,18783,1527536,305,192636,,,,,,
 14/06/2020,15/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),45235,3749356,35988,2382681,Unavailable,Unavailable,751,104221,,,16757,1688329,28478,2061027
 14/06/2020,15/06/2020,UK,Pillar 3,13452,562314,13452,562314,,,,,,,,,,
-14/06/2020,15/06/2020,UK,Pillar 4,3776,327778,Unavailable,Unavailable,,,,,,,3776,136485,0,191293
+14/06/2020,15/06/2020,UK,Pillar 4,3776,327778,3825,277732,,,,,,,3776,136485,0,191293
 15/06/2020,16/06/2020,England,Pillar 1,28149,1812661,28149,1812661,14106,1235097,252,157545,,,,,,
 15/06/2020,16/06/2020,Northern Ireland,Pillar 1,952,85961,952,85961,650,66703,2,4854,,,,,,
 15/06/2020,16/06/2020,Scotland,Pillar 1,3598,224175,3598,224175,1420,138528,10,15697,,,,,,
@@ -702,7 +702,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 15/06/2020,16/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),35711,2262744,35711,2262744,18375,1554752,329,192965,,,,,,
 15/06/2020,16/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),38989,3788546,32097,2414778,Unavailable,Unavailable,950,105171,,,16066,1704235,22923,2084311
 15/06/2020,16/06/2020,UK,Pillar 3,28186,592204,28186,592204,,,,,,,,,,
-15/06/2020,16/06/2020,UK,Pillar 4,10221,337999,Unavailable,Unavailable,,,,,,,4026,140511,6195,197488
+15/06/2020,16/06/2020,UK,Pillar 4,10221,337999,5343,283075,,,,,,,4026,140511,6195,197488
 16/06/2020,17/06/2020,England,Pillar 1,35300,1847961,35300,1847961,16458,1251555,252,157797,,,,,,
 16/06/2020,17/06/2020,Northern Ireland,Pillar 1,1432,87393,1432,87393,1011,67714,8,4862,,,,,,
 16/06/2020,17/06/2020,Scotland,Pillar 1,3885,228060,3885,228060,1673,140201,15,15712,,,,,,
@@ -710,7 +710,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 16/06/2020,17/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),42540,2305284,42540,2305284,20399,1575151,328,193293,,,,,,
 16/06/2020,17/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),53795,3842418,36422,2451200,Unavailable,Unavailable,787,105958,,,22761,1726800,31034,2115618
 16/06/2020,17/06/2020,UK,Pillar 3,39895,632146,39895,632146,,,,,,,,,,
-16/06/2020,17/06/2020,UK,Pillar 4,4129,342128,Unavailable,Unavailable,,,,,,,2849,143360,1280,198768
+16/06/2020,17/06/2020,UK,Pillar 4,4129,342128,3578,286653,,,,,,,2849,143360,1280,198768
 17/06/2020,18/06/2020,England,Pillar 1,35097,1883058,35097,1883058,18799,1270354,281,158078,,,,,,
 17/06/2020,18/06/2020,Northern Ireland,Pillar 1,1467,88860,1467,88860,1027,68741,1,4863,,,,,,
 17/06/2020,18/06/2020,Scotland,Pillar 1,4200,232260,4200,232260,1778,141979,6,15718,,,,,,
@@ -718,7 +718,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 17/06/2020,18/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),43035,2348319,43035,2348319,23244,1598395,336,193629,,,,,,
 17/06/2020,18/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),45171,3886704,40829,2492029,Unavailable,Unavailable,882,106840,,,26541,1751998,18630,2134706
 17/06/2020,18/06/2020,UK,Pillar 3,44082,678176,44082,678176,,,,,,,,,,
-17/06/2020,18/06/2020,UK,Pillar 4,4228,346356,Unavailable,Unavailable,,,,,,,2923,146283,1305,200073
+17/06/2020,18/06/2020,UK,Pillar 4,4228,346356,3685,290338,,,,,,,2923,146283,1305,200073
 18/06/2020,19/06/2020,England,Pillar 1,33806,1920734,33806,1920734,19523,1289962,323,158401,,,,,,
 18/06/2020,19/06/2020,Northern Ireland,Pillar 1,1247,90107,1247,90107,812,69553,3,4866,,,,,,
 18/06/2020,19/06/2020,Scotland,Pillar 1,3794,236054,3794,236054,1552,143531,24,15742,,,,,,
@@ -726,7 +726,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 18/06/2020,19/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),41620,2393809,41620,2393809,23472,1621952,381,194010,,,,,,
 18/06/2020,19/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),78377,3965280,44959,2536988,Unavailable,Unavailable,965,107805,,,27797,1779408,50580,2185872
 18/06/2020,19/06/2020,UK,Pillar 3,44895,722961,44895,722961,,,,,,,,,,
-18/06/2020,19/06/2020,UK,Pillar 4,4708,351064,Unavailable,Unavailable,,,,,,,3348,149631,1360,201433
+18/06/2020,19/06/2020,UK,Pillar 4,4708,351064,4380,294718,,,,,,,3348,149631,1360,201433
 19/06/2020,20/06/2020,England,Pillar 1,34530,1955264,34530,1955264,18965,1308927,324,158725,,,,,,
 19/06/2020,20/06/2020,Northern Ireland,Pillar 1,1448,91555,1448,91555,995,70548,0,4866,,,,,,
 19/06/2020,20/06/2020,Scotland,Pillar 1,3695,239749,3695,239749,1430,144961,15,15757,,,,,,
@@ -734,7 +734,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 19/06/2020,20/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),40640,2434449,40640,2434449,21933,1643885,364,194374,,,,,,
 19/06/2020,20/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),92992,4057940,46551,2583539,Unavailable,Unavailable,931,108736,,,29634,1808710,63358,2249230
 19/06/2020,20/06/2020,UK,Pillar 3,41155,764585,41155,764585,,,,,,,,,,
-19/06/2020,20/06/2020,UK,Pillar 4,55763,457227,Unavailable,Unavailable,,,,,,,4373,154004,51390,303223
+19/06/2020,20/06/2020,UK,Pillar 4,55763,457227,5189,299907,,,,,,,4373,154004,51390,303223
 20/06/2020,21/06/2020,England,Pillar 1,28203,1983749,28203,1983749,14968,1323895,215,158940,,,,,,
 20/06/2020,21/06/2020,Northern Ireland,Pillar 1,1125,92680,1125,92680,800,71348,4,4870,,,,,,
 20/06/2020,21/06/2020,Scotland,Pillar 1,3187,242936,3187,242936,1224,146185,17,15774,,,,,,
@@ -742,7 +742,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 20/06/2020,21/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),36118,2470849,36118,2470849,18913,1662798,336,194710,,,,,,
 20/06/2020,21/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),113514,4171096,44446,2627985,Unavailable,Unavailable,885,109621,,,27726,1836078,85788,2335018
 20/06/2020,21/06/2020,UK,Pillar 3,20426,786013,20426,786013,,,,,,,,,,
-20/06/2020,21/06/2020,UK,Pillar 4,4960,462187,Unavailable,Unavailable,,,,,,,4960,158964,0,303223
+20/06/2020,21/06/2020,UK,Pillar 4,4960,462187,16981,316888,,,,,,,4960,158964,0,303223
 21/06/2020,22/06/2020,England,Pillar 1,23187,2007119,23187,2007119,15788,1339683,178,159118,,,,,,
 21/06/2020,22/06/2020,Northern Ireland,Pillar 1,690,93370,690,93370,458,71806,1,4871,,,,,,
 21/06/2020,22/06/2020,Scotland,Pillar 1,2858,245794,2858,245794,1185,147370,10,15784,,,,,,
@@ -750,7 +750,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 21/06/2020,22/06/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),29457,2500489,29457,2500489,18906,1681704,260,194970,,,,,,
 21/06/2020,22/06/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),96468,4267334,27645,2655630,Unavailable,Unavailable,698,110319,,,14068,1849916,82400,2417418
 21/06/2020,22/06/2020,UK,Pillar 3,9902,795915,9902,795915,,,,,,,,,,
-21/06/2020,22/06/2020,UK,Pillar 4,3832,466019,Unavailable,Unavailable,,,,,,,3832,162796,0,303223
+21/06/2020,22/06/2020,UK,Pillar 4,3832,466019,9510,326398,,,,,,,3832,162796,0,303223
 22/06/2020,23/06/2020,England,Pillar 1,29893,2037359,29893,2037359,16308,1355991,210,159328,,,,,,
 22/06/2020,23/06/2020,Northern Ireland,Pillar 1,884,94254,884,94254,580,72386,0,4871,,,,,,
 22/06/2020,23/06/2020,Scotland,Pillar 1,2962,248756,2962,248756,1144,148514,10,15794,,,,,,
@@ -848,7 +848,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 03/07/2020,04/07/2020,UK,Pillar 3,30553,1123615,30553,1123615,,,,,,,,,,
 03/07/2020,04/07/2020,UK,Pillar 4,5538,783000,27835,599542,,,,,,,4383,216513,1155,566487
 04/07/2020,05/07/2020,England,Pillar 1,34156,2490207,34156,2490207,,,,,136,161275,,,,
-04/07/2020,05/07/2020,Northern Ireland,Pillar 1,Unavailable,104953,Unavailable,104953,,,,,0,4884,,,,
+04/07/2020,05/07/2020,Northern Ireland,Pillar 1,Unavailable,104953,Unavailable,104953,,,,,Unavailable,4884,,,,
 04/07/2020,05/07/2020,Scotland,Pillar 1,2917,290515,2917,290515,,,,,4,15840,,,,
 04/07/2020,05/07/2020,Wales,Pillar 1 & 2,3393,195821,3393,195821,,,,,15,15890,,,,
 04/07/2020,05/07/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),40466,3081496,40466,3081496,,,,,155,197889,,,,
@@ -904,7 +904,7 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 10/07/2020,11/07/2020,UK,Pillar 3,18619,1234887,18619,1234887,,,,,,,,,,
 10/07/2020,11/07/2020,UK,Pillar 4,14971,890417,8120,688947,,,,,,,5018,249792,9953,640625
 11/07/2020,12/07/2020,England,Pillar 1,39995,2758763,39995,2758763,,,,,104,162249,,,,
-11/07/2020,12/07/2020,Northern Ireland,Pillar 1,0,112083,0,112083,,,,,0,4898,,,,
+11/07/2020,12/07/2020,Northern Ireland,Pillar 1,Unavailable,112083,Unavailable,112083,,,,,Unavailable,4898,,,,
 11/07/2020,12/07/2020,Scotland,Pillar 1,3149,314740,3149,314740,,,,,1,15855,,,,
 11/07/2020,12/07/2020,Wales,Pillar 1 & 2,2879,215710,2879,215710,,,,,16,15962,,,,
 11/07/2020,12/07/2020,UK,Pillar 1 (plus partial Pillar 2 for Wales),46023,3401296,46023,3401296,,,,,121,198964,,,,
@@ -943,3 +943,35 @@ Date of activity,Date of reporting,Nation,Pillar,Daily number of tests made avai
 15/07/2020,16/07/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),131708,6867894,75826,3920134,,,,,491,93166,63869,2849342,67839,4018552
 15/07/2020,16/07/2020,UK,Pillar 3,13532,1284707,13532,1284707,,,,,,,,,,
 15/07/2020,16/07/2020,UK,Pillar 4,3882,928472,8915,730849,,,,,,,3882,273800,0,654672
+16/07/2020,17/07/2020,England,Pillar 1,42297,2958135,42297,2958135,,,,,147,162847,,,,
+16/07/2020,17/07/2020,Northern Ireland,Pillar 1,1183,118258,1183,118258,,,,,2,4902,,,,
+16/07/2020,17/07/2020,Scotland,Pillar 1,4344,333572,4344,333572,,,,,4,15871,,,,
+16/07/2020,17/07/2020,Wales,Pillar 1 & 2,2610,229327,2610,229327,,,,,16,15935,,,,
+16/07/2020,17/07/2020,UK,Pillar 1 (plus Pillar 2 for Wales),50434,3639292,50434,3639292,,,,,169,199555,,,,
+16/07/2020,17/07/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),153853,7024601,98781,4018915,,,,,518,93684,86349,2935691,67504,4088910
+16/07/2020,17/07/2020,UK,Pillar 3,13777,1298484,13777,1298484,,,,,,,,,,
+16/07/2020,17/07/2020,UK,Pillar 4,1557,930029,2974,733823,,,,,,,1557,275357,0,654672
+17/07/2020,18/07/2020,England,Pillar 1,42077,3000652,42077,3000652,,,,,180,163027,,,,
+17/07/2020,18/07/2020,Northern Ireland,Pillar 1,Unavailable,118258,Unavailable,118258,,,,,Unavailable,4902,,,,
+17/07/2020,18/07/2020,Scotland,Pillar 1,4461,338033,4461,338033,,,,,0,15871,,,,
+17/07/2020,18/07/2020,Wales,Pillar 1 & 2,2905,232232,2905,232232,,,,,10,15945,,,,
+17/07/2020,18/07/2020,UK,Pillar 1 (plus Pillar 2 for Wales),49443,3689175,49443,3689175,,,,,190,199745,,,,
+17/07/2020,18/07/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),151154,7177670,107813,4126728,,,,,637,94321,91844,3027535,59310,4150135
+17/07/2020,18/07/2020,UK,Pillar 3,12556,1311040,12556,1311040,,,,,,,,,,
+17/07/2020,18/07/2020,UK,Pillar 4,4850,934879,7813,741636,,,,,,,4850,280207,0,654672
+18/07/2020,19/07/2020,England,Pillar 1,36825,3037477,36825,3037477,,,,,120,163147,,,,
+18/07/2020,19/07/2020,Northern Ireland,Pillar 1,Unavailable,118258,Unavailable,118258,,,,,Unavailable,4902,,,,
+18/07/2020,19/07/2020,Scotland,Pillar 1,2771,340804,2771,340804,,,,,3,15874,,,,
+18/07/2020,19/07/2020,Wales,Pillar 1 & 2,2962,235194,2962,235194,,,,,12,15957,,,,
+18/07/2020,19/07/2020,UK,Pillar 1 (plus Pillar 2 for Wales),42558,3731733,42558,3731733,,,,,135,199880,,,,
+18/07/2020,19/07/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),128803,7306998,89139,4215866,,,,,591,94912,89134,3116667,39669,4190331
+18/07/2020,19/07/2020,UK,Pillar 3,3946,1315163,3946,1315163,,,,,,,,,,
+18/07/2020,19/07/2020,UK,Pillar 4,4750,939629,4750,746386,,,,,,,4750,284957,0,654672
+19/07/2020,20/07/2020,England,Pillar 1,31799,3069276,31799,3069276,,,,,58,163205,,,,
+19/07/2020,20/07/2020,Northern Ireland,Pillar 1,2727,120985,2727,120985,,,,,0,4902,,,,
+19/07/2020,20/07/2020,Scotland,Pillar 1,2455,343259,2455,343259,,,,,2,15876,,,,
+19/07/2020,20/07/2020,Wales,Pillar 1 & 2,2766,237959,2766,237959,,,,,6,15963,,,,
+19/07/2020,20/07/2020,UK,Pillar 1 (plus Pillar 2 for Wales),39747,3771479,39747,3771479,,,,,66,199946,,,,
+19/07/2020,20/07/2020,UK,Pillar 2 (includes partial Pillar 2 for Wales),114762,7421883,62825,4278692,,,,,514,95426,62825,3179493,51937,4242390
+19/07/2020,20/07/2020,UK,Pillar 3,1720,1316883,1720,1316883,,,,,,,,,,
+19/07/2020,20/07/2020,UK,Pillar 4,9316,948945,20758,763062,,,,,,,4401,289358,4915,659587
