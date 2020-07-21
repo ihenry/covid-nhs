@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SAP_BOC_SPATIAL::SPATIAL_LAD_REGION_DCV" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SAP_BOC_SPATIAL::SAP_BOC_SPATIAL_LAD_REGION_DCV" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
 <descriptions defaultDescription="SAP_BOC_SPATIAL/LAD_REGION"/>
 <localVariables/>
 <variableMappings/>
@@ -129,31 +129,31 @@
 </calculationViews>
 <logicalModel id="LAT_LONG_GEO">
   <attributes>
-    <attribute id="UTLA19CD" order="1" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="UTLA19CD"/>
+    <attribute id="GEO_UTLA19CD" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEO_UTLA19CD"/>
       <keyMapping columnObjectName="LAT_LONG_GEO" columnName="UTLA19CD"/>
     </attribute>
-    <attribute id="UTLA19NM" order="2" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="UTLA19NM" order="2" displayAttribute="false" attributeHierarchyActive="false" hidden="true">
       <descriptions defaultDescription="UTLA19NM"/>
       <keyMapping columnObjectName="LAT_LONG_GEO" columnName="UTLA19NM"/>
     </attribute>
-    <attribute id="POPULATION" order="3" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="POPULATION" order="3" displayAttribute="false" attributeHierarchyActive="false" hidden="true">
       <descriptions defaultDescription="POPULATION"/>
       <keyMapping columnObjectName="LAT_LONG_GEO" columnName="POPULATION"/>
     </attribute>
-    <attribute id="LAD19CD" order="4" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="LAD19CD"/>
+    <attribute id="GEO_LAD19CD" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEO_LAD19CD"/>
       <keyMapping columnObjectName="LAT_LONG_GEO" columnName="LAD19CD"/>
     </attribute>
-    <attribute id="LAD19NM" order="5" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LAD19NM" order="5" displayAttribute="false" attributeHierarchyActive="false" hidden="true">
       <descriptions defaultDescription="LAD19NM"/>
       <keyMapping columnObjectName="LAT_LONG_GEO" columnName="LAD19NM"/>
     </attribute>
-    <attribute id="RGN19CD" order="6" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="RGN19CD"/>
+    <attribute id="GEO_RGN19CD" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEO_RGN19CD"/>
       <keyMapping columnObjectName="LAT_LONG_GEO" columnName="RGN19CD"/>
     </attribute>
-    <attribute id="RGN19NM" order="7" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="RGN19NM" order="7" displayAttribute="false" attributeHierarchyActive="false" hidden="true">
       <descriptions defaultDescription="RGN19NM"/>
       <keyMapping columnObjectName="LAT_LONG_GEO" columnName="RGN19NM"/>
     </attribute>
