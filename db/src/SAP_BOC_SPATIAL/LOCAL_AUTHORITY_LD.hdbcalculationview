@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="SAP_BOC_SPATIAL::LOCAL_AUTHORITY_LD" applyPrivilegeType="NONE" dataCategory="DIMENSION" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="LOCAL_AUTHORITY_LD"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="table::LAD2019_WKT">
+    <resourceUri>table::LAD2019_WKT</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="table::LAD2019_WKT">
+  <attributes>
+    <attribute id="long" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="long"/>
+      <keyMapping columnObjectName="LAD2019_WKT" columnName="long"/>
+    </attribute>
+    <attribute id="lat" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="lat"/>
+      <keyMapping columnObjectName="LAD2019_WKT" columnName="lat"/>
+    </attribute>
+    <attribute id="lad19cd_geo" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="lad19cd_geo"/>
+      <keyMapping columnObjectName="LAD2019_WKT" columnName="lad19cd"/>
+    </attribute>
+    <attribute id="lad19nm_geo" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="lad19nm_geo"/>
+      <keyMapping columnObjectName="LAD2019_WKT" columnName="lad19nm"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="LOCAL_AUTHORITY_GEO" order="5" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="ST_POINT" expressionLanguage="SQL">
+        <formula>ST_Transform(ST_GeomFromText('POINT(' || &quot;long&quot; || ' ' || &quot;lat&quot; || ')', 4326),3857)</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/></logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape></shapes>
+</layout>
+</Calculation:scenario>

@@ -10,8 +10,8 @@
   <DataSource id="table::UK_LA_ULA_LOOKUP">
     <resourceUri>table::UK_LA_ULA_LOOKUP</resourceUri>
   </DataSource>
-  <DataSource id="table::UK_POPULATION">
-    <resourceUri>table::UK_POPULATION</resourceUri>
+  <DataSource id="cv::POPULATION">
+    <resourceUri>cv::POPULATION</resourceUri>
   </DataSource>
   <DataSource id="view::LAD_2019_SAC">
     <resourceUri>view::LAD_2019_SAC</resourceUri>
@@ -65,7 +65,7 @@
       <viewAttribute hidden="true" id="JOIN$CODE$LAD19CD"/>
     </viewAttributes>
     <calculatedViewAttributes/>
-    <input node="table::UK_POPULATION">
+    <input node="cv::POPULATION">
       <mapping xsi:type="Calculation:AttributeMapping" target="POPULATION" source="POPULATION"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CODE$LAD19CD" source="CODE"/>
     </input>
@@ -186,7 +186,7 @@
       <upperLeftCorner x="232" y="536"/>
       <rectangleSize height="30" width="160"/>
     </shape>
-    <shape modelObjectName="table::UK_POPULATION" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+    <shape modelObjectName="cv::POPULATION" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
       <upperLeftCorner x="20" y="30"/>
       <rectangleSize width="156"/>
     </shape>
