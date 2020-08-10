@@ -44,7 +44,8 @@
       <mapping xsi:type="Calculation:AttributeMapping" target="Specimen_date" source="Specimen date"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases" source="Daily lab-confirmed cases"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="Cumulative_lab-confirmed_cases" source="Cumulative lab-confirmed cases"/></input>
-    <filter>&quot;Area_type&quot;='Upper tier local authority'</filter>
+    <filter>&quot;Area_type&quot;='Upper tier local authority' or 
+&quot;Area_type&quot;='utla'</filter>
   </calculationView>
   <calculationView xsi:type="Calculation:AggregationView" id="LAD_REGION">
     <viewAttributes>
