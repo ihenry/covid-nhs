@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="cv::STAR_CASES" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="STAR_CASES"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="table::CASES">
+    <resourceUri>table::CASES</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="Area_name"/>
+      <viewAttribute id="Daily_lab-confirmed_cases"/>
+      <viewAttribute id="Area_code"/>
+      <viewAttribute id="Specimen_date"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="table::CASES">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_name" source="Area name"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Daily_lab-confirmed_cases" source="Daily lab-confirmed cases"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Area_code" source="Area code"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Specimen_date" source="Specimen date"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="Area_name" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Area_name"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Area_name"/>
+    </attribute>
+    <attribute id="Specimen_date" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Specimen_date"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Specimen_date"/>
+    </attribute>
+    <attribute id="Area_code$local">
+      <descriptions defaultDescription="Area_code"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Area_code"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="Daily_lab-confirmed_cases" order="2" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Daily_lab-confirmed_cases"/>
+      <measureMapping columnObjectName="Projection_1" columnName="Daily_lab-confirmed_cases"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+  <sharedDimensions>
+    <logicalJoin associatedObjectUri="cv::TT_LAD_REGION_DCV">
+      <attributes>
+        <attributeRef>Area_code$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>LAD19CD</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="C1_N" joinType="inner" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+      <associatedHierarchyFeature hierarchyName="LEVEL_REGIONAL_HIER">
+        <joinProperties nodeElementName="LEVEL_REGIONAL_HIERnode" expressionParameterName="LEVEL_REGIONAL_HIERexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+  </sharedDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="251"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="90" y="225"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
+      <upperLeftCorner x="620" y="30"/>
+      <rectangleSize width="136.0234375"/>
+    </shape>
+    <shape modelObjectName="cv::TT_LAD_REGION_DCV" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="217.357421875"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
