@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="cv::LOCAL_AUTHORITY_DCV" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="LOCAL_AUTHORITY_DCV"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="table::LAD2019_WKT">
+    <resourceUri>table::LAD2019_WKT</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="table::LAD2019_WKT">
+  <attributes>
+    <attribute id="ID" key="true" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="LAD2019_WKT" columnName="objectid"/>
+    </attribute>
+    <attribute id="NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME"/>
+      <keyMapping columnObjectName="LAD2019_WKT" columnName="lad19nm"/>
+    </attribute>
+    <attribute id="SHAPE_WKT" hidden="true" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHAPE_WKT"/>
+      <keyMapping columnObjectName="LAD2019_WKT" columnName="SHAPE_WKT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="SHAPE" order="4" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="ST_GEOMETRY" expressionLanguage="SQL">
+        <formula>ST_Transform(ST_GeomFromWKT(&quot;SHAPE_WKT&quot;,4326),3857)</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="SHAPEPOINT" order="5" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="ST_POINT" expressionLanguage="SQL">
+        <formula>ST_Centroid(&quot;SHAPE&quot;)</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="IS_LEAF" order="6" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="BOOLEAN" expressionLanguage="SQL">
+        <formula>false</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

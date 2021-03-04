@@ -16,13 +16,11 @@ resources:
  - name: hdi_db
    parameters:
       config:
+         database_id: 1b628954-30ce-428c-9ffe-22a94637dc38
          schema: covid
          makeUniqueName: false
-      service-name: covid-nhs
+      service-name: covid-nhs2
 
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
-
-
-

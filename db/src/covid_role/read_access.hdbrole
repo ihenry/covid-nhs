@@ -1,0 +1,12 @@
+{
+  "role": {
+    "name": "covid_role::read_access",
+    "schema_privileges": [
+      {
+        "privileges": [
+          "SELECT"
+        ]
+      }
+    ]
+  }
+}
